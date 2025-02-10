@@ -4,7 +4,7 @@ import logo from "../assets/logo.png";
 
 const Navbar = ({ navItems, socialLinks }) => {
   return (
-    <nav className="z-10 flex items-center justify-between bg-white px-6 py-3 shadow-md-3 rounded-full mx-4 border-2 border-blue-600 xl:w-[90vw] w-[33vh]" >
+    <nav className="z-10 fixed top-6 flex items-center justify-between bg-white px-6 py-3 shadow-md-3 rounded-full mx-4 border-2 border-blue-600 xl:w-[90vw] w-[33vh]" >
       {/* Logo Section */}
       <div className="flex items-center space-x-2">
         <img
