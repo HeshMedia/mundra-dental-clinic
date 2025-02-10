@@ -90,7 +90,7 @@ const optionsRow2 = {
 const HomeReviews = () => {
   return (
     <section id="reviews" className="py-12 bg-white overflow-hidden">
-      <div className="flex flex-col items-center justify-center container px-4 text-center">
+      <div className="flex flex-col items-center justify-center max-w-[98vw] px-4 text-center">
         <h2 className="text-4xl font-extrabold text-[#213f8e] pb-5">
           Client Reviews
         </h2>
@@ -99,7 +99,7 @@ const HomeReviews = () => {
         <Splide options={optionsRow1} extensions={{ AutoScroll }}>
           {reviews.map((review, index) => (
             <SplideSlide key={`row1-${index}`}>
-              <div className="flex-none w-full md:max-w-[510px] max-w-[100vw] bg-[#E3EBFE] p-6 rounded-lg shadow-md text-center md:h-[20vh] h-[18vh] flex flex-col hover:border-2 hover:border-blue-500">
+              <div className="flex-none w-full md:max-w-[510px] max-w-[90vw] bg-[#E3EBFE] md:p-6 p-2 rounded-lg shadow-md text-center md:h-[20vh] h-[18vh] flex flex-col hover:border-2 hover:border-blue-500">
                 <div className="flex flex-col items-center mb-6">
                   <p className="font-bold text-lg mb-1 text-[#3975FA]">
                     {review.client}
@@ -116,7 +116,7 @@ const HomeReviews = () => {
         <Splide options={optionsRow2} extensions={{ AutoScroll }} className="mt-6">
           {reviews.map((review, index) => (
             <SplideSlide key={`row2-${index}`}>
-              <div className="flex-none w-full md:max-w-[510px] max-w-[100vw] bg-[#E3EBFE] p-6 rounded-lg shadow-md text-center md:h-[20vh] h-[18vh] flex flex-col hover:border-2 hover:border-blue-500">
+              <div className="flex-none w-full md:max-w-[510px] max-w-[90vw] bg-[#E3EBFE] md:p-6 p-2 rounded-lg shadow-md text-center md:h-[20vh] h-[18vh] flex flex-col hover:border-2 hover:border-blue-500">
                 <div className="flex flex-col items-center mb-6">
                   <p className="font-bold text-lg mb-1 text-[#3975FA]">
                     {review.client}

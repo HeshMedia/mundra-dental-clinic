@@ -6,6 +6,9 @@ import HomeServices from "../components/homeServices";
 import HomeDoctor from "../components/homeDoctor";
 import HomeReviews from "../components/homeReviews";
 import HomeContact from "../components/homeContact";
+import HomeMap from "../components/homeMap";
+import Footer from "../components/ui/footer";
+import WhatsApp from "../components/ui/whatsapp";
 
 
 const HomePage = () => {
@@ -110,6 +113,9 @@ const HomePage = () => {
         <HomeDoctor />
         <HomeReviews />
         <HomeContact /> 
+        <HomeMap />
+        <Footer />
+        <WhatsApp />
       </div>
     </div>
 

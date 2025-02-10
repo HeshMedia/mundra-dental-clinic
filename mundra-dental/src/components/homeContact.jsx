@@ -1,8 +1,9 @@
 import React from "react";
+import { Phone, Mail, MapPin } from 'lucide-react';
 
 const ContactPage = () => {
   return (
-    <section className="bg-white h-screen w-[80vw] flex items-center justify-center px-4 overflow-hidden">
+    <section className="bg-white md:h-[60vh] w-[90vw] my-16 flex justify-center px-4 overflow-hidden">
       <div className="flex flex-col md:flex-row justify-between gap-12">
         {/* Contact Form */}
         <div className="bg-transparent p-6">
@@ -14,7 +15,7 @@ const ContactPage = () => {
                 <input
                     type="text"
                     id="name"
-                    className="mt-1 block w-full px-3 py-2 border rounded-md"
+                    className="mt-1 block w-full px-3 py-2 border rounded-md shadow-lg"
                 />
                 </div>
 
@@ -25,7 +26,7 @@ const ContactPage = () => {
                     <input
                     type="email"
                     id="email"
-                    className="mt-1 block w-full px-3 py-2 border rounded-md"
+                    className="mt-1 block w-full px-3 py-2 border rounded-md shadow-lg"
                     />
                 </div>
                 <div className="flex-1">
@@ -33,7 +34,7 @@ const ContactPage = () => {
                     <input
                     type="tel"
                     id="phone"
-                    className="mt-1 block w-full px-3 py-2 border rounded-md"
+                    className="mt-1 block w-full px-3 py-2 border rounded-md shadow-lg"
                     />
                 </div>
                 </div>
@@ -44,7 +45,7 @@ const ContactPage = () => {
                 <textarea
                     id="message"
                     rows="4"
-                    className="mt-1 block w-full px-3 py-2 border rounded-md"
+                    className="mt-1 block w-full px-3 py-2 border rounded-md shadow-lg"
                 ></textarea>
                 </div>
 
@@ -52,7 +53,7 @@ const ContactPage = () => {
                 <div className="mt-4 text-center">
                 <button
                     type="submit"
-                    className="inline-block px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+                    className="inline-block px-8 py-4 md:w-[10vw] bg-blue-600 text-white text-lg font-semibold rounded-full hover:bg-blue-700 hover:scale-105"
                 >
                     Submit
                 </button>
@@ -62,32 +63,52 @@ const ContactPage = () => {
         </div>
 
         {/* Contact Information */}
-        <div className="text-center md:text-left">
-          <h2 className="text-2xl font-bold text-blue-600 mb-4">Contact Us</h2>
-          <p className="text-sm text-gray-700 mb-6">
-            Contact us for questions, technical assistance, or collaboration opportunities via the contact information provided.
-          </p>
-          <div className="space-y-4">
-            <div className="flex items-center justify-center md:justify-start gap-3">
-              <span className="text-orange-500 text-xl">
-                <i className="fas fa-phone"></i>
-              </span>
-              <p className="text-sm text-gray-700">+91 123456789</p>
+        <div className="max-w-3xl mx-auto px-4 py-8">
+        <h2 className="text-4xl font-extrabold text-[#213f8e] pb-5">CONTACT US</h2>
+        <div className="h-[2px] w-[300px] bg-gray-800 mb-12"></div>
+        <p className="md:w-[30vw] text-lg text-gray-600 mb-8">
+          Contact us for questions, technical assistance, or collaboration opportunities
+          via the contact information provided.
+        </p>
+
+        {/* Icons with Contact Info */}
+        <div className="space-y-6">
+          {/* Phone */}
+          <div className="flex items-center space-x-4">
+            <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#E3EBFE]">
+              <Phone className="w-6 h-6 text-[#213f8e]" />
             </div>
-            <div className="flex items-center justify-center md:justify-start gap-3">
-              <span className="text-orange-500 text-xl">
-                <i className="fas fa-envelope"></i>
-              </span>
-              <p className="text-sm text-gray-700">mundradental@gmail.com</p>
+            <p className="text-lg text-gray-700">+91123456789</p>
+          </div>
+
+          {/* Email */}
+            <div className="flex items-center space-x-4">
+            <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#E3EBFE]">
+                <a href="mailto:drmundra@gmail.com">
+                <Mail className="w-6 h-6 text-[#213f8e] cursor-pointer" />
+                </a>
             </div>
-            <div className="flex items-center justify-center md:justify-start gap-3">
-              <span className="text-orange-500 text-xl">
-                <i className="fas fa-map-marker-alt"></i>
-              </span>
-              <p className="text-sm text-gray-700">24-A, 100 Feet Rd, East Mohan Nagar, Amritsar, Amritsar Cantt., Punjab 143001</p>
+            <a
+                href="mailto:drmundra@gmail.com"
+                className="text-lg text-gray-700 hover:underline hover:text-blue-700"
+            >
+                drmundra@gmail.com
+            </a>
             </div>
+
+          {/* Location */}
+          <div className="flex items-center space-x-4">
+            <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#E3EBFE]">
+              <MapPin className="w-6 h-6 text-[#213f8e]" />
+            </div>
+            <p className="text-lg text-gray-700 hover:text-blue-700 hover:underline">
+                <a href="https://maps.app.goo.gl/458vMNuQi8Y2wzhj9" target="_blank" rel="noopener noreferrer"> 
+                24-A, 100 Feet Rd, East Mohan Nagar, Amritsar, Amritsar Cantt., Punjab 143001
+                </a>
+                </p>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );
