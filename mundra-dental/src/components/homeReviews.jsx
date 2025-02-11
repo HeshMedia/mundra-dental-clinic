@@ -91,7 +91,7 @@ const HomeReviews = () => {
   return (
     <section id="reviews" className="py-12 bg-white overflow-hidden">
       <div className="flex flex-col items-center justify-center max-w-[98vw] px-4 text-center">
-        <h2 className="text-4xl font-extrabold text-[#213f8e] pb-5">
+        <h2 className="text-4xl font-semibold text-[#213f8e] pb-5">
           Client Reviews
         </h2>
         <div className="h-[2px] w-[300px] bg-gray-800 mb-8"></div>

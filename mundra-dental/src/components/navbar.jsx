@@ -17,7 +17,7 @@ const Navbar = ({ navItems }) => {
 
   return (
     <>
-      <nav className="z-10 fixed top-6 left-1/2 transform -translate-x-1/2 flex items-center justify-between bg-white px-6 py-3 shadow-md rounded-full border-2 border-blue-600 w-[95%] max-w-screen-xl">
+      <nav className="z-10 fixed top-6 left-1/2 transform -translate-x-1/2 flex items-center justify-between bg-white px-6 py-3 shadow-2xl border rounded-3xl border-gray-600 w-[95%] max-w-screen-xl">
         {/* Logo Section */}
         <div className="flex items-center">
           <img

@@ -2,7 +2,7 @@ const HomeDoctor = () => {
   return (
     <div className="w-[80vw] pb-12 px-4 sm:px-6 lg:px-8 mt-12 flex flex-col items-start justify-center">
       {/* Section Heading */}
-      <h2 className="text-4xl font-extrabold text-[#213f8e] pb-5">
+      <h2 className="text-4xl font-semibold text-[#213f8e] pb-5">
         Behind Every Great Smile <br />
         is a Great Dentist!
       </h2>
@@ -11,8 +11,8 @@ const HomeDoctor = () => {
       {/* Content Container */}
       <div className="w-full relative md:h-[50vh] bg-[#E3EBFE] flex flex-col md:flex-row items-start justify-between rounded-lg shadow-lg">
         {/* Text Section */}
-        <div className="p-6 flex flex-col items-start justify-center">
-          <h3 className="text-3xl font-bold text-[#213f8e] mt-4 mb-4">Dr. Keshav Mundra</h3>
+        <div className="md:p-16 p-4 flex flex-col items-start justify-center">
+          <h3 className="text-3xl font-semibold text-[#213f8e] mt-4 mb-4">Dr. Keshav Mundra</h3>
           <p className="text-lg font-semibold text-black mb-4">MDS – PROSTHODONTIST</p>
           <p className="text-gray-700 md:hidden">
             Dr. Keshav Mundra, a specialist in prosthodontics, excels in dental implants,

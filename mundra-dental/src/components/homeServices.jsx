@@ -2,7 +2,7 @@ const HomeServices = ({ services }) => {
   return (
     <div className="w-full pb-12 px-4 sm:px-6 lg:px-8 mt-12">
       <div className="flex flex-col items-center mb-12">
-        <h1 className="text-[#213f8e] font-extrabold text-4xl pb-5 md:text-5xl md:leading-tight">
+        <h1 className="text-[#213f8e] font-semibold text-4xl pb-5 md:text-5xl md:leading-tight">
           Our Services
         </h1>
         <div className="h-[2px] w-[300px] bg-gray-800 mb-16"></div>
@@ -11,7 +11,7 @@ const HomeServices = ({ services }) => {
           {services.map((service, index) => (
             <div 
               key={index}
-              className="group relative p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white border-2 border-[#E3EBFE] hover:border-blue-500 md:hover:scale-110 hover:scale-105"
+              className="group relative p-8 rounded-lg shadow-lg hover:shadow-xl bg-white border-2 border-[#E3EBFE] hover:border-blue-500 transform transition-transform duration-300 md:hover:scale-110 hover:scale-105"
             >
               {/* Icon/Image */}
               <div className="mb-4 text-blue-600">
