@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { Phone, Mail, MapPin } from 'lucide-react';
 
 const HomeContact = () => {
@@ -6,7 +7,13 @@ const HomeContact = () => {
     <section className="bg-white md:h-[65vh] w-[90vw] my-16 flex justify-center px-4 overflow-hidden">
       <div className="flex flex-col md:flex-row justify-between gap-12">
         {/* Contact Form */}
-        <div className="bg-transparent p-6 order-2 md:order-1">
+        <motion.div 
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="bg-transparent p-6 order-2 md:order-1"
+        >
           <form className="max-w-md mx-auto p-4">
             <div className="space-y-4">
               {/* Name Field */}
@@ -60,55 +67,101 @@ const HomeContact = () => {
               </div>
             </div>
           </form>
-        </div>
+        </motion.div>
 
         {/* Contact Information */}
-        <div className="max-w-3xl mx-auto px-4 py-8 order-1 md:order-2">
-          <h2 className="text-4xl font-semibold text-[#213f8e] pb-5">CONTACT US</h2>
-          <div className="h-[2px] w-[300px] bg-gray-800 mb-12"></div>
-          <p className="md:w-[30vw] text-lg text-gray-600 mb-8">
-            Contact us for questions, technical assistance, or collaboration opportunities
-            via the contact information provided.
-          </p>
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="max-w-3xl mx-auto px-4 py-8 order-1 md:order-2"
+        >
+          <motion.h2
+            initial={{ opacity: 0, y: -10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="text-4xl font-semibold text-[#213f8e] pb-5"
+          >
+            CONTACT US
+          </motion.h2>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="h-[2px] w-[300px] bg-gray-800 mb-12"
+          />
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="md:w-[30vw] text-lg text-gray-600 mb-8"
+          >
+            Contact us for questions, technical assistance, or collaboration opportunities via the contact information provided.
+          </motion.p>
 
           {/* Icons with Contact Info */}
           <div className="space-y-6">
             {/* Phone */}
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#E3EBFE]">
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              transition={{ duration: 0.3 }}
+              className="flex items-center space-x-4"
+            >
+              <motion.div 
+                whileHover={{ scale: 1.1 }}
+                className="flex items-center justify-center w-12 h-12 rounded-full bg-[#E3EBFE]"
+              >
                 <Phone className="w-6 h-6 text-[#213f8e]" />
-              </div>
+              </motion.div>
               <p className="text-lg text-gray-700">+91123456789</p>
-            </div>
+            </motion.div>
 
             {/* Email */}
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#E3EBFE]">
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              transition={{ duration: 0.3 }}
+              className="flex items-center space-x-4"
+            >
+              <motion.div 
+                whileHover={{ scale: 1.1 }}
+                className="flex items-center justify-center w-12 h-12 rounded-full bg-[#E3EBFE]"
+              >
                 <a href="mailto:drmundra@gmail.com">
                   <Mail className="w-6 h-6 text-[#213f8e] cursor-pointer" />
                 </a>
-              </div>
+              </motion.div>
               <a
                 href="mailto:drmundra@gmail.com"
                 className="text-lg text-gray-700 hover:underline hover:text-blue-700"
               >
                 drmundra@gmail.com
               </a>
-            </div>
+            </motion.div>
 
             {/* Location */}
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#E3EBFE]">
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              transition={{ duration: 0.3 }}
+              className="flex items-center space-x-4"
+            >
+              <motion.div 
+                whileHover={{ scale: 1.1 }}
+                className="flex items-center justify-center w-12 h-12 rounded-full bg-[#E3EBFE]"
+              >
                 <MapPin className="w-6 h-6 text-[#213f8e]" />
-              </div>
+              </motion.div>
               <p className="text-lg text-gray-700 hover:text-blue-700 hover:underline">
                 <a href="https://maps.app.goo.gl/458vMNuQi8Y2wzhj9" target="_blank" rel="noopener noreferrer"> 
                   24-A, 100 Feet Rd, East Mohan Nagar, <br />Amritsar, Amritsar Cantt., Punjab 143001
                 </a>
               </p>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

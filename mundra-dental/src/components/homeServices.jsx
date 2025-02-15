@@ -1,6 +1,9 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+
 const HomeServices = ({ services }) => {
   return (
-    <div className="w-full pb-12 px-4 sm:px-6 lg:px-8 mt-12">
+    <div id="homeservices"className="w-full pb-12 px-4 sm:px-6 lg:px-8 mt-12">
       <div className="flex flex-col items-center mb-12">
         <h1 className="text-[#213f8e] font-semibold text-4xl pb-5 md:text-5xl md:leading-tight">
           Our Services
@@ -9,8 +12,13 @@ const HomeServices = ({ services }) => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 w-full max-w-7xl">
           {services.map((service, index) => (
-            <div 
+            <motion.div 
               key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
+              transition={{ duration: 0.5, delay: index * 0.3 }}
+              viewport={{ once: true }}
               className="group relative p-8 rounded-lg shadow-lg hover:shadow-xl bg-white border-2 border-[#E3EBFE] hover:border-blue-500 transform transition-transform duration-300 md:hover:scale-110 hover:scale-105"
             >
               {/* Icon/Image */}
@@ -53,7 +61,7 @@ const HomeServices = ({ services }) => {
                   />
                 </svg>
               </a>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -61,4 +69,4 @@ const HomeServices = ({ services }) => {
   );
 };
 
-export default HomeServices
+export default HomeServices;

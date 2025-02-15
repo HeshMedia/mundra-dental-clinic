@@ -1,8 +1,16 @@
+import React from "react";
+import { motion } from "framer-motion";
 import { Facebook, Instagram, Youtube } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-background py-3 border-t border-border px-3">
+    <motion.footer
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className="bg-background py-3 border-t border-border px-3"
+    >
       <div className="container px-4 pt-12 pb-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
           <div>
@@ -126,17 +134,17 @@ const Footer = () => {
           <p>
             Website made and maintained by{" "}
             <a
-                href="https://heshmedia.in"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-bold underline hover:text-blue-700 cursor-pointer"
+              href="https://heshmedia.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold underline hover:text-blue-700 cursor-pointer"
             >
-                HeshMedia
+              HeshMedia
             </a>
           </p>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 

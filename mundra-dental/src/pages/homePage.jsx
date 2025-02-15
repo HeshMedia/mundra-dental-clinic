@@ -9,30 +9,32 @@ import HomeContact from "../components/homeContact";
 import HomeMap from "../components/homeMap";
 import Footer from "../components/ui/footer";
 import WhatsApp from "../components/ui/whatsapp";
+import HomeChoose from "../components/homeChoose";
+import { FaUserMd, FaTooth, FaMoneyBillWave, FaPhoneAlt, FaStar, FaCogs } from "react-icons/fa";
+import toothImage from "/teeth.webp";
 
 
 const HomePage = () => {
   const navItems = [
-    { label: "Home", href: "#" },
-    { label: "About", href: "#" },
+    { label: "Home", href: "#homehero" },
+    { label: "About", href: "#homeabout" },
     {
       label: "Services",
-      href: "#",
+      href: "#homeservices",
       subItems: [
-        { label: "Service 1", href: "#" },
-        { label: "Service 2", href: "#" },
+        { label: "Braces & Aligners", href: "#" },
+        { label: "Dental Fillings", href: "#" },
+        { label: "Dental Implants", href: "#" },
+        { label: "Teeth Whitening", href: "#" },
+        { label: "Extractions", href: "#" },
+        { label: "Wisdom Tooth", href: "#" },
+        { label: "Molar Crown", href: "#" },
+        { label: "Braces and Aligners 2", href: "#" },
       ],
     },
     { label: "Team", href: "#" },
-    {
-      label: "Reviews",
-      href: "#",
-      subItems: [
-        { label: "Google Reviews", href: "#" },
-        { label: "Facebook Reviews", href: "#" },
-      ],
-    },
-    { label: "Contact Us", href: "#" },
+    { label: "Reviews",href: "#", },
+    { label: "Contact Us", href: "#homecontact" },
   ];
 
   const socialLinks = [
@@ -99,17 +101,57 @@ const HomePage = () => {
     },
   ];
 
+  const chooseData = [
+    {
+      title: "Experienced Doctor",
+      description: "The goal of our clinic is to provide friendly, caring dentistry.",
+      iconType: "svg",
+      Icon: FaUserMd,
+    },
+    {
+      title: "Personalized Care",
+      description: "We offer personalized dental care with a focus on comfort.",
+      iconType: "svg",
+      Icon: FaTooth,
+    },
+    {
+      title: "Flexible Payment Options",
+      description: "We provide various payment options to suit your needs.",
+      iconType: "svg",
+      Icon: FaMoneyBillWave,
+    },
+    {
+      title: "Emergency Services",
+      description: "24/7 emergency dental services available for urgent care.",
+      iconType: "svg",
+      Icon: FaPhoneAlt,
+    },
+    {
+      title: "Positive Patient Reviews",
+      description: "Our patients love us! Check out their testimonials.",
+      iconType: "svg",
+      Icon: FaStar,
+    },
+    {
+      title: "Latest Technology",
+      description: "We use cutting-edge technology for the best dental care.",
+      iconType: "svg",
+      Icon: FaCogs,
+    },
+  ];
+
   return (
     <>
     {/* Navbar and HomeHero Components */}
-    <div className="bg-[#E3EBFE] h-screen">
+    <div className="h-screen">
       <div className="ml-10 mr-10">
         <Navbar navItems={navItems} socialLinks={socialLinks} />
       </div>
-      <div className="flex flex-col items-center justify-center gap-8 md:gap-0">
+      <div className="flex flex-col items-center justify-center gap-8 md:gap-0 overflow-hidden">
         <HomeHero />
         <HomeAbout />
         <HomeServices services={servicesData} />
+        <HomeChoose data={chooseData} image={toothImage}/>
         <HomeDoctor />
         <HomeReviews />
         <HomeContact /> 

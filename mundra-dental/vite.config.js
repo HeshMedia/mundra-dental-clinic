@@ -7,9 +7,6 @@ export default defineConfig({
   server: {
     host: true, // Allows external access
     cors: true, // Enables CORS for external hosts
-    hmr: {
-      host: 'jgh1btvm5fgt.share.zrok.io',
-    },
-    allowedHosts: ['jgh1btvm5fgt.share.zrok.io'], // Add the domain to allowed hosts
+    hmr: true  
   },
 })

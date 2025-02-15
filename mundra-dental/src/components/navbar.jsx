@@ -17,7 +17,7 @@ const Navbar = ({ navItems }) => {
 
   return (
     <>
-      <nav className="z-10 fixed top-6 left-1/2 transform -translate-x-1/2 flex items-center justify-between bg-white px-6 py-3 shadow-2xl border rounded-3xl border-gray-600 w-[95%] max-w-screen-xl">
+      <nav className="z-20 fixed top-6 left-1/2 transform -translate-x-1/2 flex items-center justify-between bg-white px-6 py-3 shadow-2xl border rounded-3xl border-gray-600 w-[95%] max-w-screen-xl">
         {/* Logo Section */}
         <div className="flex items-center">
           <img
@@ -31,7 +31,7 @@ const Navbar = ({ navItems }) => {
         <div className="hidden md:flex flex-1 items-center justify-center">
           <ul className="flex space-x-4 lg:space-x-6 whitespace-nowrap">
             {navItems.map((item, index) => (
-              <li key={index} className="group relative px-2">
+              <li key={index} className="group relative px-2 py-3">  {/* Added pb-3 for padding-bottom */}
                 <a
                   href={item.href}
                   className="text-blue-900 hover:text-blue-600 font-bold text-sm lg:text-base"
@@ -39,7 +39,7 @@ const Navbar = ({ navItems }) => {
                   {item.label}
                 </a>
                 {item.subItems && (
-                  <ul className="z-20 absolute left-0 hidden mt-2 bg-white shadow-lg rounded-lg group-hover:block min-w-[200px]">
+                  <ul className="z-20 absolute left-0 top-full hidden bg-white shadow-lg rounded-lg group-hover:block hover:block min-w-[200px] pt-1">  {/* Removed mt-2, added pt-1 */}
                     {item.subItems.map((subItem, subIndex) => (
                       <li
                         key={subIndex}
@@ -116,7 +116,7 @@ const Navbar = ({ navItems }) => {
                 <img
                   src="/logo.png"
                   alt="Mundra Dental Clinic Logo"
-                  className="w-40 h-12"
+                  className="w-48 h-12"
                 />
                 <button
                   onClick={() => setIsOpen(false)}
