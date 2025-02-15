@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Facebook, Instagram, Youtube } from "lucide-react";
+import { FaGoogle, FaFacebook, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -103,28 +103,28 @@ const Footer = () => {
             <h3 className="font-semibold mb-4 text-foreground">Connect</h3>
             <div className="flex space-x-4">
               <a
-                href="https://www.facebook.com/share/15kH8JHZMZ/?mibextid=wwXIfr"
+                href="https://www.facebook.com/mundradentalclinic/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary"
               >
-                <Facebook className="h-5 w-5" />
+                <FaFacebook className="h-5 w-5" />
               </a>
               <a
-                href="https://www.youtube.com/@heshmedia"
+                href="https://g.co/kgs/PvWbPmb"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary"
               >
-                <Youtube className="h-5 w-5" />
+                <FaGoogle className="h-5 w-5" />
               </a>
               <a
-                href="https://www.instagram.com/heshmedia.in"
+                href="https://www.instagram.com/mundradental/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary"
               >
-                <Instagram className="h-5 w-5" />
+                <FaInstagram className="h-5 w-5" />
               </a>
             </div>
           </div>
