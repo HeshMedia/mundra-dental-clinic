@@ -30,7 +30,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="#about"
+                  href="#homeabout"
                   className="text-sm text-muted-foreground hover:text-primary"
                 >
                   About
@@ -38,7 +38,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#services"
+                  href="#homeservices"
                   className="text-sm text-muted-foreground hover:text-primary"
                 >
                   Services
@@ -46,15 +46,15 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#portfolio"
+                  href="#homechoose"
                   className="text-sm text-muted-foreground hover:text-primary"
                 >
-                  Portfolio
+                  Why Us
                 </a>
               </li>
               <li>
                 <a
-                  href="#contact"
+                  href="#homecontact"
                   className="text-sm text-muted-foreground hover:text-primary"
                 >
                   Contact
@@ -67,34 +67,34 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="services/smm"
+                  href="#"
                   className="text-sm text-muted-foreground hover:text-primary"
                 >
-                  Social Media Management
+                  Braces and Aligners
                 </a>
               </li>
               <li>
                 <a
-                  href="services/graphic-design"
+                  href="#"
                   className="text-sm text-muted-foreground hover:text-primary"
                 >
-                  Graphic Designing
+                  Dental Fillings
                 </a>
               </li>
               <li>
                 <a
-                  href="services/video-editing"
+                  href="#"
                   className="text-sm text-muted-foreground hover:text-primary"
                 >
-                  Video Editing
+                  Dental Implants
                 </a>
               </li>
               <li>
                 <a
-                  href="services/web-development"
+                  href="#"
                   className="text-sm text-muted-foreground hover:text-primary"
                 >
-                  Web Development
+                  Teeth Whitening
                 </a>
               </li>
             </ul>

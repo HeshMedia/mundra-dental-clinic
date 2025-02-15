@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const HomeChoose = ({ data, image }) => {
   return (
-    <div className="w-full px-6 py-12 bg-blue-50 flex justify-center">
+    <div id="homechoose" className="w-full px-6 py-12 bg-blue-50 flex justify-center">
       <div className="max-w-7xl w-full">
         {/* Section Title */}
         <div className="text-center mb-12">
