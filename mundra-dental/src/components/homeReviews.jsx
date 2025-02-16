@@ -138,6 +138,7 @@ const HomeReviews = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
           className="mt-6"
+          id="homecontact"
         >
           <Splide options={optionsRow2} extensions={{ AutoScroll }}>
             {reviews.map((review, index) => (
