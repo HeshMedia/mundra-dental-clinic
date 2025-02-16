@@ -73,6 +73,7 @@ const HomeChoose = ({ data, image }) => {
 // Updated ServiceCard component with scroll and hover animations using Framer Motion
 const ServiceCard = ({ item, index }) => (
   <motion.div
+    key={index}
     initial={{ opacity: 0, y: -5 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5, delay: 0.4 }}
