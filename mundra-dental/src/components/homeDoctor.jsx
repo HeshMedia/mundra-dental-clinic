@@ -58,12 +58,16 @@ const HomeDoctor = () => {
         </motion.div>
 
           {/* Image Section */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1.5, delay: 0.2, ease: 'easeInOut' }}
+            viewport={{ once: true }}>
           <img className="w-full h-full md:w-[25vw] md:h-[35vw] md:absolute bottom-0 md:right-4 px-4"
             src="doctor.webp"
             alt="Dr. Keshav Mundra"
           />
-        </div>
+        </motion.div>
       </motion.div>
     </div>
   );

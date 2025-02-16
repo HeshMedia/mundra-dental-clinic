@@ -6,11 +6,22 @@ const HomeChoose = ({ data, image }) => {
     <div id="homechoose" className="w-full px-6 py-12 bg-blue-50 flex justify-center">
       <div className="max-w-7xl w-full">
         {/* Section Title */}
-        <div className="text-center mb-12">
-          <h1 className="text-blue-900 font-semibold text-3xl md:text-4xl">
-            Why Choose Us
-          </h1>
-          <div className="h-[2px] w-32 bg-blue-900 mx-auto mt-3"></div>
+        <div className="text-center mb-12 flex flex-col items-center">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-4xl font-semibold text-[#213f8e] pb-5"
+          >Why Choose Us?
+          </motion.h2>
+          <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.9 }}
+          viewport={{ once: true }}
+          className="h-[2px] w-[300px] bg-gray-800 mb-8"
+        />
         </div>
 
         {/* Centered Layout */}
@@ -62,9 +73,9 @@ const HomeChoose = ({ data, image }) => {
 // Updated ServiceCard component with scroll and hover animations using Framer Motion
 const ServiceCard = ({ item, index }) => (
   <motion.div
-    initial={{ opacity: 0, y: -20 }}
+    initial={{ opacity: 0, y: -5 }}
     whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5, delay: index * 0.1 }}
+    transition={{ duration: 0.5, delay: 0.4 }}
     viewport={{ once: true }}
     whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
     className="flex items-start space-x-4 bg-white md:bg-transparent shadow-md md:shadow-none p-6 rounded-lg border border-gray-200 md:border-none hover:shadow-lg md:hover:shadow-none transition duration-300"

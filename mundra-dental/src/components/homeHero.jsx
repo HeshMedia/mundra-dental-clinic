@@ -15,13 +15,13 @@ const HomeHero = () => {
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5, delay:0.5, ease: 'backInOut' }}
           viewport={{ once: true }}
           className="relative z-10 md:w-1/2 flex flex-col md:items-start"
         >
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
             className="text-[#213f8e] font-semibold text-4xl pb-5 md:text-5xl md:leading-tight md:ml-16 md:mt-12 transition-all"
@@ -36,8 +36,8 @@ const HomeHero = () => {
             className="h-[2px] w-[150px] bg-gray-800 md:ml-16 transition-all"
           />
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0}}
+            whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
             className="pt-4 text-2xl text-gray-700 md:pr-8 md:ml-16 transition-all"
@@ -46,8 +46,10 @@ const HomeHero = () => {
             preventive care to implants, we ensure your best smile.
           </motion.p>
           <motion.button
-            whileHover={{ scale: 1.05, backgroundColor: 'blue' }}
-            transition={{ duration: 0.3 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            whileHover={{scale: 1.05, backgroundColor: 'blue' }}
+            transition={{ duration: 0.5 }}
             className="bg-[#213f8e] text-white font-semibold px-6 py-3 rounded-3xl mt-8 md:mt-12 md:text-xl md:px-6 md:py-6 md:ml-16 w-[50vw] md:w-[25vw]"
           >
             Book Appointment

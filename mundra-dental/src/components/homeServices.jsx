@@ -17,7 +17,7 @@ const HomeServices = ({ services }) => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
-              transition={{ duration: 0.5, delay: index * 0.3 }}
+              transition={{ duration: 0.5, delay: 0.3, ease: 'easeInOut' }}
               viewport={{ once: true }}
               className="group relative p-8 rounded-lg shadow-lg hover:shadow-xl bg-white border-2 border-[#E3EBFE] hover:border-blue-500 transform transition-transform duration-300 md:hover:scale-110 hover:scale-105"
             >
