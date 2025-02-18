@@ -12,6 +12,7 @@ import WhatsApp from "../components/ui/whatsapp";
 import HomeChoose from "../components/homeChoose";
 import { FaUserMd, FaTooth, FaMoneyBillWave, FaPhoneAlt, FaStar, FaCogs } from "react-icons/fa";
 import toothImage from "/teeth.webp";
+import { Link } from 'react-router-dom';
 
 
 const HomePage = () => {
@@ -24,7 +25,7 @@ const HomePage = () => {
       subItems: [
         { label: "Braces & Aligners", href: "#" },
         { label: "Dental Fillings", href: "#" },
-        { label: "Dental Implants", href: "#" },
+        { label: "Dental Implants", href: "/services/implants" },
         { label: "Teeth Whitening", href: "#" },
         { label: "Extractions", href: "#" },
         { label: "Wisdom Tooth", href: "#" },
@@ -44,14 +45,14 @@ const HomePage = () => {
 
   const servicesData = [
     {
-      title: "Braces & Aligners",
+      title: "Orthodontics",
       description: "Donec nec risus arcu sed sodales rhoncus leo, ut ullamcorper metus",
       linkUrl: "./services/braces",
       iconType: "image",
       icon: "/services-icons/dental-braces.svg",
     },
     {
-      title: "Dental Fillings",
+      title: "Root Canal Treatment",
       description: "Donec nec risus arcu sed sodales rhoncus leo, ut ullamcorper metu",
       linkUrl: "./services/fillings",
       iconType: "image",
@@ -79,21 +80,21 @@ const HomePage = () => {
       icon: "/services-icons/tooth-extraction.png",
     },
     {
-      title: "Wisdom Tooth",
+      title: "Ceramic Crowns & Bridges",
       description: "Donec nec risus arcu sed sodales rhoncus leo, ut ullamcorpe",
       linkUrl: "./services/wisdom-tooth",
       iconType: "image",
       icon: "/services-icons/wisdom-tooth.png",
     },
     {
-      title: "Molar Crown",
+      title: "Full and Partial Dentures",
       description: "Donec nec risus arcu sed sodales rhoncus leo, ut ullamcorp",
       linkUrl: "./services/molar-crown",
       iconType: "image",
       icon: "/services-icons/molar-crown.svg",
     },
     {
-      title: "Braces & Aligners 2",
+      title: "Smile Designing",
       description: "Donec nec risus arcu sed sodales rhoncus leo, ut ullamcor",
       linkUrl: "./services/braces-2",
       iconType: "image",

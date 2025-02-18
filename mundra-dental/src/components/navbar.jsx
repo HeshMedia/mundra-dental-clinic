@@ -20,11 +20,13 @@ const Navbar = ({ navItems }) => {
       <nav className="z-20 fixed top-6 left-1/2 transform -translate-x-1/2 flex items-center justify-between bg-white px-6 py-3 shadow-2xl border rounded-3xl border-gray-600 w-[95%] max-w-screen-xl">
         {/* Logo Section */}
         <div className="flex items-center">
+          <a href="/" className="mr-4">
           <img
             src="/logo.png"
             alt="Mundra Dental Clinic Logo"
             className="w-50 h-12 md:w-50 md:h-16"
           />
+          </a>
         </div>
 
         {/* Desktop Navigation */}
