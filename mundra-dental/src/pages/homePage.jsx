@@ -12,7 +12,6 @@ import WhatsApp from "../components/ui/whatsapp";
 import HomeChoose from "../components/homeChoose";
 import { FaUserMd, FaTooth, FaMoneyBillWave, FaPhoneAlt, FaStar, FaCogs } from "react-icons/fa";
 import toothImage from "/teeth.webp";
-import { Link } from 'react-router-dom';
 
 
 const HomePage = () => {
@@ -33,7 +32,7 @@ const HomePage = () => {
         { label: "Braces and Aligners 2", href: "#" },
       ],
     },
-    { label: "Team", href: "#" },
+    { label: "Team", href: "/team" },
     { label: "Reviews",href: "#", },
     { label: "Contact Us", href: "#homecontact" },
   ];
@@ -46,59 +45,59 @@ const HomePage = () => {
   const servicesData = [
     {
       title: "Orthodontics",
-      description: "Donec nec risus arcu sed sodales rhoncus leo, ut ullamcorper metus",
-      linkUrl: "./services/braces",
+      description: "We offer a variety of orthodontic treatments to help you achieve a straighter smile.",
+      linkUrl: "./services/orthodontics",
       iconType: "image",
       icon: "/services-icons/dental-braces.svg",
     },
     {
       title: "Root Canal Treatment",
-      description: "Donec nec risus arcu sed sodales rhoncus leo, ut ullamcorper metu",
-      linkUrl: "./services/fillings",
+      description: "We provide root canal treatments to save your natural teeth and prevent extractions.",
+      linkUrl: "./services/root-canal-treatment",
       iconType: "image",
-      icon: "/services-icons/dental-filling.svg",
+      icon: "/services-icons/root-canal.png",
     },
     {
       title: "Dental Implants",
-      description: "Donec nec risus arcu sed sodales rhoncus leo, ut ullamcorper met",
-      linkUrl: "./services/implants",
+      description: "We offer dental implants to replace missing teeth and restore your smile.",
+      linkUrl: "./services/dental-implants",
       iconType: "image",
       icon: "/services-icons/dental-implant.svg",
     },
     {
       title: "Teeth Whitening",
-      description: "Donec nec risus arcu sed sodales rhoncus leo, ut ullamcorper me",
-      linkUrl: "./services/whitening",
+      description: "We provide professional teeth whitening treatments to brighten your smile.",
+      linkUrl: "./services/teeth-whitening",
       iconType: "image",
       icon: "/services-icons/tooth-whitening.png",
     },
     {
       title: "Extractions",
-      description: "Donec nec risus arcu sed sodales rhoncus leo, ut ullamcorper ",
-      linkUrl: "./services/extractions",
+      description: "We perform tooth extractions to remove damaged or decayed teeth.",
+      linkUrl: "./services/tooth-extractions",
       iconType: "image",
       icon: "/services-icons/tooth-extraction.png",
     },
     {
-      title: "Ceramic Crowns & Bridges",
-      description: "Donec nec risus arcu sed sodales rhoncus leo, ut ullamcorpe",
-      linkUrl: "./services/wisdom-tooth",
+      title: "Crowns & Bridges",
+      description: "We offer ceramic crowns and bridges to restore damaged or missing teeth.",
+      linkUrl: "./services/crowns-and-bridges",
       iconType: "image",
-      icon: "/services-icons/wisdom-tooth.png",
+      icon: "/services-icons/dental-crown.png",
     },
     {
-      title: "Full and Partial Dentures",
-      description: "Donec nec risus arcu sed sodales rhoncus leo, ut ullamcorp",
-      linkUrl: "./services/molar-crown",
+      title: "Full & Partial Dentures",
+      description: "We provide full and partial dentures to replace missing teeth and restore your smile.",
+      linkUrl: "./services/full-and-partial-dentures",
       iconType: "image",
-      icon: "/services-icons/molar-crown.svg",
+      icon: "/services-icons/dentures.png",
     },
     {
       title: "Smile Designing",
-      description: "Donec nec risus arcu sed sodales rhoncus leo, ut ullamcor",
-      linkUrl: "./services/braces-2",
+      description: "We offer smile designing treatments to enhance the appearance of your smile.",
+      linkUrl: "./services/smile-designing",
       iconType: "image",
-      // Icon: "/path-to-braces-2-icon.png",
+      icon: "/services-icons/smiley.png",
     },
   ];
 

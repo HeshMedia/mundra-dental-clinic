@@ -1,9 +1,14 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import HomePage from '../pages/homePage';
-import Braces from '../pages/braces';
-import Fillings from '../pages/fillings';
+import Orthodontics from '../pages/orthodontics';
+import Rct from '../pages/rct';
 import DentalImplants from '../pages/dentalImplants';
 import Whitening from '../pages/whitening';
+import Extractions from '../pages/extractions';
+import CrownsAndBridges from '../pages/crownsAndBridges';
+import FullAndPartialDentures from '../pages/fullAndPartialDentures';
+import SmileDesigning from '../pages/smileDesigning';
+import Team from '../pages/team';
 
 const router = createBrowserRouter([
   {
@@ -11,21 +16,41 @@ const router = createBrowserRouter([
     element: <HomePage />,
   },
   {
-    path: '/services/braces',
-    element: <Braces />,
+    path: '/services/orthodontics',
+    element: <Orthodontics />,  
   },
   {
-    path: '/services/fillings',
-    element: <Fillings />,
+    path: '/services/root-canal-treatment',
+    element: <Rct />,
   },
   {
-    path: '/services/implants',
+    path: '/services/dental-implants',
     element: <DentalImplants />,
   },
   {
-    path: '/services/whitening',
+    path: '/services/teeth-whitening',
     element: <Whitening />,
   },
+  {
+    path: '/services/tooth-extractions',
+    element: <Extractions />,
+  },
+  {
+    path: '/services/crowns-and-bridges',
+    element: <CrownsAndBridges />,
+  },
+  {
+    path: '/services/full-and-partial-dentures',
+    element: <FullAndPartialDentures />,
+  },
+  {
+    path: '/team',
+    element: <Team />,
+  },
+  {
+    path: '/services/smile-designing',
+    element: <SmileDesigning />,
+  }
 
 ]);
 

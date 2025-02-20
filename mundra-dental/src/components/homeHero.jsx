@@ -48,6 +48,7 @@ const HomeHero = () => {
           >
             Providing advanced dental solutions with a gentle touch. From preventive care to implants, we ensure your best smile.
           </motion.p>
+          <a href="#homecontact">
           <motion.button
             initial={isMobile ? {} : { opacity: 0 }}
             whileInView={isMobile ? {} : { opacity: 1 }}
@@ -57,7 +58,9 @@ const HomeHero = () => {
           >
             Book Appointment
           </motion.button>
+          </a>
         </motion.div>
+
 
         {/* Right Image */}
         <motion.div
