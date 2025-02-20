@@ -24,7 +24,7 @@ const HomePage = () => {
       subItems: [
         { label: "Braces & Aligners", href: "/services/orthodontics" },
         { label: "Root Canal Treatment", href: "/services/root-canal-treatment" },
-        { label: "Dental Implants", href: "/services/implants" },
+        { label: "Dental Implants", href: "/services/dental-implants" },
         { label: "Teeth Whitening", href: "/services/teeth-whitening" },
         { label: "Extractions", href: "/services/tooth-extractions" },
         { label: "Crowns & Bridges", href: "/services/crowns-and-bridges" },
