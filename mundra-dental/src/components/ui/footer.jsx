@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaGoogle, FaFacebook, FaInstagram } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -14,13 +15,13 @@ const Footer = () => {
       <div className="container px-4 pt-12 pb-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
           <div>
-            <a href="/" className="flex items-center gap-2">
+            <Link to="/" className="flex items-center gap-2">
               <img
                 src="/logo.png"
                 alt="Dr Mundra's Dental Clinic, Amritsar"
                 className="h-24 md:h-[10vh] md:w-[30vw] w-[80vw] pt-2 -ml-4"
               />
-            </a>
+            </Link>
             <p className="mt-4 text-sm text-muted-foreground">
               Transform your social media presence with data-driven strategies and creative excellence.
             </p>
@@ -29,36 +30,36 @@ const Footer = () => {
             <h3 className="font-semibold mb-4 text-foreground">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="#homeabout"
+                <Link
+                  to="#homeabout"
                   className="text-sm text-muted-foreground hover:text-primary"
                 >
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#homeservices"
+                <Link
+                  to="#homeservices"
                   className="text-sm text-muted-foreground hover:text-primary"
                 >
                   Services
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#homechoose"
+                <Link
+                  to="#homechoose"
                   className="text-sm text-muted-foreground hover:text-primary"
                 >
                   Why Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#homecontact"
+                <Link
+                  to="#homecontact"
                   className="text-sm text-muted-foreground hover:text-primary"
                 >
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -66,36 +67,36 @@ const Footer = () => {
             <h3 className="font-semibold mb-4 text-foreground">Services</h3>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/services/orthodontics"
                   className="text-sm text-muted-foreground hover:text-primary"
                 >
-                  Braces and Aligners
-                </a>
+                  Orthodontics
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/services/root-canal-treatment"
                   className="text-sm text-muted-foreground hover:text-primary"
                 >
-                  Dental Fillings
-                </a>
+                  Root Canal Treatment
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/services/dental-implants"
                   className="text-sm text-muted-foreground hover:text-primary"
                 >
                   Dental Implants
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/services/teeth-whitening"
                   className="text-sm text-muted-foreground hover:text-primary"
                 >
                   Teeth Whitening
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

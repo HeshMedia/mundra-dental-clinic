@@ -22,12 +22,10 @@ const HomeServices = ({ services }) => {
               transition={{ duration: 0.5, delay: 0.3, ease: 'easeInOut' }}
               viewport={{ once: true }}
             >
-              {/* Wrap the entire card in a Link */}
               <Link
-                to={service.linkUrl}
-                className="block group h-[38vh] relative p-8 rounded-lg shadow-lg hover:shadow-xl bg-white border-2 border-[#E3EBFE] hover:border-blue-500 transform transition-transform duration-300 md:hover:scale-110 hover:scale-105"
+              to={service.linkUrl}
+              className="block group relative p-8 rounded-lg shadow-lg hover:shadow-xl bg-white border-2 border-[#E3EBFE] hover:border-blue-500 transform transition-transform duration-300 md:hover:scale-110 hover:scale-105"
               >
-                {/* Icon/Image */}
                 <div className="mb-4 text-blue-600">
                   {service.iconType === "svg" ? (
                     <service.Icon className="w-12 h-12" />

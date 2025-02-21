@@ -145,7 +145,7 @@ const HomeContact = () => {
             viewport={{ once: true }}
             className="md:w-[30vw] text-lg text-gray-600 mb-8"
           >
-            Contact us for questions, technical assistance, or collaboration opportunities via the contact information provided.
+            Contact us for any queries or to book an appointment. We are here to help you with all your dental needs.
           </motion.p>
 
           {/* Icons with Contact Info */}
@@ -162,7 +162,7 @@ const HomeContact = () => {
               >
                 <Phone className="w-6 h-6 text-[#213f8e]" />
               </motion.div>
-              <p className="text-lg text-gray-700">+91123456789</p>
+              <p className="text-lg text-gray-700">+917009446988</p>
             </motion.div>
 
             {/* Email */}
@@ -183,7 +183,7 @@ const HomeContact = () => {
                 href="mailto:drmundra@gmail.com"
                 className="text-lg text-gray-700 hover:underline hover:text-blue-700"
               >
-                drmundra@gmail.com
+                mundradentalclinic@gmail.com
               </a>
             </motion.div>
 
