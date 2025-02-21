@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const HomeDoctor = () => {
   return (
-    <div className="w-[80vw] pb-12 px-4 sm:px-6 lg:px-8 mt-12 flex flex-col items-start justify-center">
+    <div id="hometeam" className="scroll-mt-40 w-[80vw] pb-12 px-4 sm:px-6 lg:px-8 mt-12 flex flex-col items-start justify-center">
       {/* Section Heading */}
        <motion.h2
                 initial={{ opacity: 0, y: 20 }}

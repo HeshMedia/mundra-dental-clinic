@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaInstagram, FaGoogle, FaTimes, FaBars } from "react-icons/fa";
+import { HashLink } from "react-router-hash-link";
 
-const Navbar = ({ navItems }) => {
+const Navbar = ({ navItems, socialLinks }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const sidebarVariants = {
@@ -15,44 +16,57 @@ const Navbar = ({ navItems }) => {
     closed: { opacity: 0 },
   };
 
+  // Scroll function to offset the fixed navbar.
+  const scrollWithOffset = (el) => {
+    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+    const yOffset = -100; // Adjust this value to control how far above the section you want to stop.
+    window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
+  };
+
   return (
     <>
       <nav className="z-20 fixed top-6 left-1/2 transform -translate-x-1/2 flex items-center justify-between bg-white px-6 py-3 shadow-2xl border rounded-3xl border-gray-600 w-[95%] max-w-screen-xl">
         {/* Logo Section */}
         <div className="flex items-center">
-          <a href="/" className="mr-4">
-          <img
-            src="/logo.png"
-            alt="Mundra Dental Clinic Logo"
-            className="w-50 h-12 md:w-50 md:h-16"
-          />
-          </a>
+          <HashLink smooth to="/" className="mr-4">
+            <img
+              src="/logo.png"
+              alt="Mundra Dental Clinic Logo"
+              className="w-50 h-12 md:w-50 md:h-16"
+            />
+          </HashLink>
         </div>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex flex-1 items-center justify-center">
           <ul className="flex space-x-4 lg:space-x-6 whitespace-nowrap">
             {navItems.map((item, index) => (
-              <li key={index} className="group relative px-2 py-3">  {/* Added pb-3 for padding-bottom */}
-                <a
-                  href={item.href}
+              <li key={index} className="group relative px-2 py-3">
+                <HashLink
+                  smooth
+                  scroll={
+                    item.label === "Team" || item.label === "Contact Us"
+                      ? scrollWithOffset
+                      : undefined
+                  }
+                  to={item.href}
                   className="text-blue-900 hover:text-blue-600 font-bold text-sm lg:text-base"
+                  onClick={() => setIsOpen(false)}
                 >
                   {item.label}
-                </a>
+                </HashLink>
                 {item.subItems && (
-                  <ul className="z-20 absolute left-0 top-full hidden bg-white shadow-lg rounded-lg group-hover:block hover:block min-w-[200px] pt-1">  {/* Removed mt-2, added pt-1 */}
+                  <ul className="z-20 absolute left-0 top-full hidden bg-white shadow-lg rounded-lg group-hover:block hover:block min-w-[200px] pt-1">
                     {item.subItems.map((subItem, subIndex) => (
-                      <li
-                        key={subIndex}
-                        className="px-4 py-2 hover:bg-gray-100 first:rounded-t-lg last:rounded-b-lg"
-                      >
-                        <a
-                          href={subItem.href}
+                      <li key={subIndex} className="px-4 py-2 hover:bg-gray-100 first:rounded-t-lg last:rounded-b-lg">
+                        <HashLink
+                          smooth
+                          to={subItem.href}
                           className="block text-gray-700 text-sm"
+                          onClick={() => setIsOpen(false)}
                         >
                           {subItem.label}
-                        </a>
+                        </HashLink>
                       </li>
                     ))}
                   </ul>
@@ -115,11 +129,13 @@ const Navbar = ({ navItems }) => {
               className="fixed top-0 right-0 h-full w-72 bg-white z-50 p-6 shadow-xl"
             >
               <div className="flex justify-between items-center mb-8">
-                <img
-                  src="/logo.png"
-                  alt="Mundra Dental Clinic Logo"
-                  className="w-48 h-12"
-                />
+                <HashLink smooth to="/" onClick={() => setIsOpen(false)}>
+                  <img
+                    src="/logo.png"
+                    alt="Mundra Dental Clinic Logo"
+                    className="w-48 h-12"
+                  />
+                </HashLink>
                 <button
                   onClick={() => setIsOpen(false)}
                   className="text-blue-900 text-2xl"
@@ -131,24 +147,31 @@ const Navbar = ({ navItems }) => {
               <ul className="flex flex-col space-y-4">
                 {navItems.map((item, index) => (
                   <li key={index} className="group relative">
-                    <a
-                      href={item.href}
+                    <HashLink
+                      smooth
+                      scroll={
+                        item.label === "Team" || item.label === "Contact Us"
+                          ? scrollWithOffset
+                          : undefined
+                      }
+                      to={item.href}
                       onClick={() => setIsOpen(false)}
                       className="text-blue-900 hover:text-blue-600 font-bold text-lg"
                     >
                       {item.label}
-                    </a>
+                    </HashLink>
                     {item.subItems && (
                       <ul className="pl-4 mt-2 space-y-2">
                         {item.subItems.map((subItem, subIndex) => (
                           <li key={subIndex}>
-                            <a
-                              href={subItem.href}
+                            <HashLink
+                              smooth
+                              to={subItem.href}
                               onClick={() => setIsOpen(false)}
                               className="block text-gray-700 hover:text-blue-600"
                             >
                               {subItem.label}
-                            </a>
+                            </HashLink>
                           </li>
                         ))}
                       </ul>

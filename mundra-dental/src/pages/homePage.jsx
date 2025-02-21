@@ -22,7 +22,7 @@ const HomePage = () => {
       label: "Services",
       href: "#homeservices",
       subItems: [
-        { label: "Braces & Aligners", href: "/services/orthodontics" },
+        { label: "Orthodontics", href: "/services/orthodontics" },
         { label: "Root Canal Treatment", href: "/services/root-canal-treatment" },
         { label: "Dental Implants", href: "/services/dental-implants" },
         { label: "Teeth Whitening", href: "/services/teeth-whitening" },
@@ -32,7 +32,7 @@ const HomePage = () => {
         { label: "Smile Designing", href: "/services/smile-designing" },
       ],
     },
-    { label: "Team", href: "/team" },
+    { label: "Team", href: "#hometeam" },
     { label: "Reviews",href: "#", },
     { label: "Contact Us", href: "#homecontact" },
   ];

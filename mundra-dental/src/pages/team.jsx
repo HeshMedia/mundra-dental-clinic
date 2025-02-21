@@ -12,7 +12,7 @@ const Team = () => {
       </div>
 
       {/* Doctor Card */}
-      <div className="max-w-6xl mx-auto px-8 md:px-16 py-8 mt-16 mb-16 border bg-gray-100 border-black rounded-lg shadow-lg hover:scale-110 transition-transform duration-300">
+      <div className="max-w-6xl mx-auto px-8 md:px-16 py-8 mt-16 mb-16 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300">
         {/* Basic Info Section */}
         <div className="flex flex-col md:flex-row items-center md:items-start md:space-x-6">
           {/* Text Section */}

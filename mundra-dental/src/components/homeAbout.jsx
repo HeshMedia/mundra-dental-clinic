@@ -18,7 +18,7 @@ const HomeAbout = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="md:w-1/2 flex justify-center"
+          className="md:w-1/2 flex justify-center order-2 md:order-1"
         >
           <div className="relative w-full">
             <motion.img
@@ -38,7 +38,7 @@ const HomeAbout = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
           viewport={{ once: true }}
-          className="md:w-1/2 flex flex-col md:items-start md:mr-10 md:pl-10"
+          className="md:w-1/2 flex flex-col md:items-start md:mr-10 md:pl-10 order-1 md:order-2"
         >
           <motion.h1
             initial={{ opacity: 0, y: 20 }}

@@ -15,7 +15,6 @@ const ServiceLayout = ({
 
   const handleScrollToContact = () => {
     if (window.location.pathname === "/") {
-      // If already on the homepage, scroll directly
       const contactSection = document.getElementById("homecontact");
       if (contactSection) {
         contactSection.scrollIntoView({ behavior: "smooth" });
@@ -40,7 +39,7 @@ const ServiceLayout = ({
   }, []);
 
   return (
-    <div className="container mx-auto px-4 py-4 bg-white">
+    <div className="container mx-auto mt-10 px-4 py-4 bg-white">
       {/* Hero Section */}
       <section className="bg-[#E3EBFE] p-4 rounded-lg shadow-md mb-8 flex flex-col items-center">
         <h1 className="text-3xl md:text-4xl font-bold text-center text-blue-600 mb-8">{title}</h1>

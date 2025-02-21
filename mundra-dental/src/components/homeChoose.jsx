@@ -75,11 +75,6 @@ const HomeChoose = ({ data, image }) => {
                 alt="Tooth Model" 
                 className="w-full h-full object-cover rounded-full" 
               />
-              {/* Decorative Circles */}
-              <div className="absolute z-10 top-0 left-1/2 -translate-x-1/2 -translate-y-[1px] w-3 h-3 bg-blue-300 rounded-full"></div>
-              <div className="absolute z-10 bottom-0 left-1/2 -translate-x-1/2 translate-y-[1px] w-3 h-3 bg-blue-300 rounded-full"></div>
-              <div className="absolute z-10 top-1/2 right-0 translate-x-[1px] -translate-y-1/2 w-3 h-3 bg-blue-300 rounded-full"></div>
-              <div className="absolute z-10 top-1/2 left-0 -translate-x-[1px] -translate-y-1/2 w-3 h-3 bg-blue-300 rounded-full"></div>
             </div>
           </motion.div>
 

@@ -18,7 +18,7 @@ const Footer = () => {
               <img
                 src="/logo.png"
                 alt="Dr Mundra's Dental Clinic, Amritsar"
-                className="h-24 md:w-[20vw] w-[80vw] pt-2 -ml-4"
+                className="h-24 md:h-[10vh] md:w-[30vw] w-[80vw] pt-2 -ml-4"
               />
             </a>
             <p className="mt-4 text-sm text-muted-foreground">
