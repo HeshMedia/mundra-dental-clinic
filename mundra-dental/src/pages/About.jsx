@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import homeaboutpic from "../assets/homeaboutpic.jpg";
 import Navbar from '../components/navbar';
 import Footer from '../components/ui/footer';
 
 const About = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "instant"
+    });
+  }, []);
 
   const navItems = [
     { label: "Home", href: "/#homehero" },

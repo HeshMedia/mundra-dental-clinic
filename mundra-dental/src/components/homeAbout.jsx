@@ -1,6 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { HashLink } from "react-router-hash-link";
 import homeaboutpic from "../assets/homeaboutpic.jpg";
+
+const MotionHashLink = motion(HashLink);
 
 const HomeAbout = () => {
   return (
@@ -81,17 +84,16 @@ const HomeAbout = () => {
             viewport={{ once: true }}
             className="mt-8"
           >
-            <motion.a
-              href="/about"
+            <MotionHashLink
+              to="/about"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="inline-block px-8 py-3 bg-[#213f8e] text-white rounded-md text-lg font-semibold hover:bg-[#1a2f6d] transition-colors"
             >
               Learn More
-            </motion.a>
+            </MotionHashLink>
           </motion.div>
         </motion.div>
-        
       </section>
     </div>
   );
