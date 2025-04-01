@@ -117,7 +117,7 @@ const HomeReviews = () => {
           <Splide options={optionsRow1} extensions={{ AutoScroll }}>
             {reviews.map((review, index) => (
               <SplideSlide key={`row1-${index}`}>
-                <div className="flex-none w-full md:max-w-[510px] max-w-[90vw] bg-[#E3EBFE] md:p-6 p-2 rounded-lg shadow-md text-center md:h-[20vh] h-[18vh] flex flex-col">
+                <div className="flex-none w-full md:max-w-[510px] max-w-[90vw] bg-[#E3EBFE] md:p-6 p-2 rounded-lg shadow-md text-center md:h-[20vh] h-[18vh] flex flex-col hover:border-2 hover:border-blue-500">
                   <div className="flex flex-col items-center mb-6">
                     <p className="font-bold text-lg mb-1 text-[#3975FA]">
                       {review.client}
@@ -137,13 +137,13 @@ const HomeReviews = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="mt-6 scroll-mb-36"
+          className="mt-6"
           id="homecontact"
         >
           <Splide options={optionsRow2} extensions={{ AutoScroll }}>
             {reviews.map((review, index) => (
               <SplideSlide key={`row2-${index}`}>
-                <div className="flex-none w-full md:max-w-[510px] max-w-[90vw] bg-[#E3EBFE] md:p-6 p-2 rounded-lg shadow-md text-center md:h-[20vh] h-[18vh] flex flex-col">
+                <div className="flex-none w-full md:max-w-[510px] max-w-[90vw] bg-[#E3EBFE] md:p-6 p-2 rounded-lg shadow-md text-center md:h-[20vh] h-[18vh] flex flex-col hover:border-2 hover:border-blue-500">
                   <div className="flex flex-col items-center mb-6">
                     <p className="font-bold text-lg mb-1 text-[#3975FA]">
                       {review.client}

@@ -74,7 +74,24 @@ const HomeAbout = () => {
           >
             Our mission is to provide pain-free, high-quality dental services in a comfortable environment, ensuring every patient leaves with a confident smile.
           </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            viewport={{ once: true }}
+            className="mt-8"
+          >
+            <motion.a
+              href="/about"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-block px-8 py-3 bg-[#213f8e] text-white rounded-md text-lg font-semibold hover:bg-[#1a2f6d] transition-colors"
+            >
+              Learn More
+            </motion.a>
+          </motion.div>
         </motion.div>
+        
       </section>
     </div>
   );

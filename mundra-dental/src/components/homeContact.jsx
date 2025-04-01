@@ -33,7 +33,7 @@ const HomeContact = () => {
   };
 
   return (
-    <section className="bg-white md:h-[65vh] w-[90vw] my-16 flex justify-center px-4 overflow-hidden">
+    <section className="bg-white md:h-[65vh] w-[90vw] my-16 flex justify-center px-4 overflow-hidden" id="homecontact">
       <div className="flex flex-col md:flex-row justify-between gap-12">
         {/* Contact Form */}
         <motion.div 

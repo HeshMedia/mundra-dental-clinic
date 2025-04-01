@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
 import WhatsApp from "./ui/whatsapp";
 import Footer from "./ui/footer";
+import Navbar from "../components/navbar";
 
 const ServiceLayout = ({ 
   title, 
@@ -38,10 +39,38 @@ const ServiceLayout = ({
     });
   }, []);
 
+  const navItems = [
+    { label: "Home", href: "/#homehero" },
+    { label: "About", href: "/#homeabout" },
+    {
+      label: "Services",
+      href: "/#homeservices",
+      subItems: [
+        { label: "Orthodontics", href: "/services/orthodontics" },
+        { label: "Root Canal Treatment", href: "/services/root-canal-treatment" },
+        { label: "Dental Implants", href: "/services/dental-implants" },
+        { label: "Teeth Whitening", href: "/services/teeth-whitening" },
+        { label: "Extractions", href: "/services/tooth-extractions" },
+        { label: "Crowns & Bridges", href: "/services/crowns-and-bridges" },
+        { label: "Full and Partial Dentures", href: "/services/full-and-partial-dentures" },
+        { label: "Smile Designing", href: "/services/smile-designing" },
+      ],
+    },
+    { label: "Team", href: "/#hometeam" },
+    { label: "Reviews",href: "#", },
+    { label: "Contact Us", href: "/#homecontact" },
+  ];
+
+  const socialLinks = [
+    { label: "Instagram", href: "https://instagram.com", icon: "/path-to-instagram-icon.png" },
+    { label: "Google", href: "https://google.com", icon: "/path-to-google-icon.png" },
+  ];
+
   return (
     <div className="container mx-auto mt-10 px-4 py-4 bg-white">
+      <Navbar navItems={navItems} socialLinks={socialLinks} />
       {/* Hero Section */}
-      <section className="bg-[#E3EBFE] p-4 rounded-lg shadow-md mb-8 flex flex-col items-center">
+      <section className="bg-[#E3EBFE] p-4 mt-32 rounded-lg shadow-md mb-8 flex flex-col items-center">
         <h1 className="text-3xl md:text-4xl font-bold text-center text-blue-600 mb-8">{title}</h1>
         <hr className="w-48 h-1 bg-gray-700 mx-auto" />
         <div className="flex flex-col md:flex-row gap-8 items-center">

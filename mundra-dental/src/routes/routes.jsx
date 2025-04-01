@@ -9,6 +9,7 @@ import CrownsAndBridges from '../pages/crownsAndBridges';
 import FullAndPartialDentures from '../pages/fullAndPartialDentures';
 import SmileDesigning from '../pages/smileDesigning';
 import Team from '../pages/team';
+import About from '../pages/About';
 
 const router = createBrowserRouter([
   {
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
   {
     path: '/services/smile-designing',
     element: <SmileDesigning />,
+  },
+  {
+    path: '/about',
+    element: <About />,
   }
 
 ]);
