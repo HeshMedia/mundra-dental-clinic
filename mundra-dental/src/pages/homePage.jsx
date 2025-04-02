@@ -33,7 +33,7 @@ const HomePage = () => {
       ],
     },
     { label: "Team", href: "#hometeam" },
-    { label: "Reviews",href: "#", },
+    { label: "Reviews",href: "#reviews", },
     { label: "Contact Us", href: "#homecontact" },
   ];
 

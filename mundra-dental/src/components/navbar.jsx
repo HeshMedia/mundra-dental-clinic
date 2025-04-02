@@ -25,7 +25,7 @@ const Navbar = ({ navItems, socialLinks }) => {
 
   return (
     <>
-      <nav className="z-20 fixed top-6 left-1/2 transform -translate-x-1/2 flex items-center justify-between bg-white px-6 py-3 shadow-2xl border rounded-3xl border-gray-600 w-[95%] max-w-screen-xl">
+      <nav className="z-20 fixed top-6 left-1/2 transform -translate-x-1/2 flex items-center justify-between bg-white px-6 py-3 shadow-xl border rounded-3xl border-gray-600 w-[95%] max-w-screen-xl">
         {/* Logo Section */}
         <div className="flex items-center">
           <HashLink smooth to="/" className="mr-4">
@@ -45,7 +45,7 @@ const Navbar = ({ navItems, socialLinks }) => {
                 <HashLink
                   smooth
                   scroll={
-                    item.label === "Team" || item.label === "Contact Us"
+                    item.label === "Team" || item.label === "Contact Us" 
                       ? scrollWithOffset
                       : undefined
                   }

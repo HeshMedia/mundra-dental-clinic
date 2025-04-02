@@ -57,7 +57,7 @@ const ServiceLayout = ({
       ],
     },
     { label: "Team", href: "/#hometeam" },
-    { label: "Reviews",href: "#", },
+    { label: "Reviews",href: "/#reviews", },
     { label: "Contact Us", href: "/#homecontact" },
   ];
 
@@ -70,7 +70,7 @@ const ServiceLayout = ({
     <div className="container mx-auto mt-10 px-4 py-4 bg-white">
       <Navbar navItems={navItems} socialLinks={socialLinks} />
       {/* Hero Section */}
-      <section className="bg-[#E3EBFE] p-4 mt-32 rounded-lg shadow-md mb-8 flex flex-col items-center">
+      <section className="p-4 mt-32 mb-8 flex flex-col items-center">
         <h1 className="text-3xl md:text-4xl font-bold text-center text-blue-600 mb-8">{title}</h1>
         <hr className="w-48 h-1 bg-gray-700 mx-auto" />
         <div className="flex flex-col md:flex-row gap-8 items-center">

@@ -30,7 +30,7 @@ const About = () => {
       ],
     },
     { label: "Team", href: "/#hometeam" },
-    { label: "Reviews",href: "#", },
+    { label: "Reviews",href: "/#reviews", },
     { label: "Contact Us", href: "/#homecontact" },
   ];
   const socialLinks = [
