@@ -46,7 +46,7 @@ const Navbar = ({ navItems, socialLinks }) => {
                     if (item.label === "Team") {
                       scrollWithOffset(el, -180);
                     } else if (item.label === "Reviews") {
-                      scrollWithOffset(el, -150);
+                      scrollWithOffset(el, -100);
                     } else if (item.label === "Contact Us") {
                       scrollWithOffset(el, -5);
                     } else if (item.label === "Services") {
