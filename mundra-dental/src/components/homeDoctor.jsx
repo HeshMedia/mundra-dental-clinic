@@ -58,14 +58,12 @@ const HomeDoctor = () => {
           to detail and passion for dentistry make him a trusted name in the field.
           </p>
           <p className="text-gray-700 hidden md:block">
-          Dr. Keshav Mundra, is a highly experienced dental specialist with over 15 years of clinical expertise. <br /> 
+          A highly experienced dental specialist with over 15 years of clinical expertise. <br /> 
           He is renowned for his precision and excellence in prosthodontics, dental implants, smile restoration, <br /> 
           and full-mouth rehabilitation. Dr. Mundra is committed to delivering exceptional patient outcomes <br /> 
           through a unique combination of restorative and cosmetic dentistry.
           With a deep understanding of <br /> dental aesthetics and functionality, he takes a personalized approach  
           to every case, ensuring that each <br /> patient receives top-quality, tailored care. 
-          Whether it's a complex implant case or a smile makeover, <br /> Dr. Mundra’s meticulous attention 
-          to detail and passion for dentistry make him a trusted name in the field.
           </p>
         </motion.div>
 

@@ -16,10 +16,8 @@ const Navbar = ({ navItems, socialLinks }) => {
     closed: { opacity: 0 },
   };
 
-  // Scroll function to offset the fixed navbar.
-  const scrollWithOffset = (el) => {
+  const scrollWithOffset = (el, yOffset) => {
     const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-    const yOffset = -100; // Adjust this value to control how far above the section you want to stop.
     window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
   };
 
@@ -44,11 +42,19 @@ const Navbar = ({ navItems, socialLinks }) => {
               <li key={index} className="group relative px-2 py-3">
                 <HashLink
                   smooth
-                  scroll={
-                    item.label === "Team" || item.label === "Contact Us" 
-                      ? scrollWithOffset
-                      : undefined
-                  }
+                  scroll={(el) => {
+                    if (item.label === "Team") {
+                      scrollWithOffset(el, -180);
+                    } else if (item.label === "Reviews") {
+                      scrollWithOffset(el, -150);
+                    } else if (item.label === "Contact Us") {
+                      scrollWithOffset(el, -5);
+                    } else if (item.label === "Services") {
+                      scrollWithOffset(el, -110)
+                    } else {
+                      scrollWithOffset(el, 0);
+                    }
+                  }}
                   to={item.href}
                   className="text-blue-900 hover:text-blue-600 font-bold text-sm lg:text-base"
                   onClick={() => setIsOpen(false)}
@@ -149,11 +155,17 @@ const Navbar = ({ navItems, socialLinks }) => {
                   <li key={index} className="group relative">
                     <HashLink
                       smooth
-                      scroll={
-                        item.label === "Team" || item.label === "Contact Us"
-                          ? scrollWithOffset
-                          : undefined
-                      }
+                      scroll={(el) => {
+                        if (item.label === "Team") {
+                          scrollWithOffset(el, -180);
+                        } else if (item.label === "Reviews") {
+                          scrollWithOffset(el, -150);
+                        } else if (item.label === "Contact Us") {
+                          scrollWithOffset(el, -180);
+                        } else {
+                          scrollWithOffset(el, 0);
+                        }
+                      }}
                       to={item.href}
                       onClick={() => setIsOpen(false)}
                       className="text-blue-900 hover:text-blue-600 font-bold text-lg"
