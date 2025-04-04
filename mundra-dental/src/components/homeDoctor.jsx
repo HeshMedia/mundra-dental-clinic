@@ -51,7 +51,7 @@ const HomeDoctor = () => {
           and full-mouth rehabilitation. Dr. Mundra is committed to delivering exceptional patient outcomes 
           through a unique combination of restorative and cosmetic dentistry.
           With a deep understanding of dental aesthetics and functionality, he takes a personalized approach 
-          to every case, ensuring that each patient receives top-quality, tailored care. 
+          to every case so each patient receives top-quality care. 
           </p>
           <p className="text-gray-700 hidden md:block">
           A highly experienced dental specialist with over 15 years of clinical expertise. <br /> 
@@ -59,7 +59,7 @@ const HomeDoctor = () => {
           and full-mouth rehabilitation. Dr. Mundra is committed to delivering <br/> exceptional patient outcomes 
           through a unique combination of restorative and <br /> cosmetic dentistry.
           With a deep understanding of dental aesthetics and functionality, <br /> he takes a personalized approach  
-          to every case so each patient receives top-quality, tailored care. 
+          to every case so each patient receives top-quality care. 
           </p>
         </motion.div>
 
