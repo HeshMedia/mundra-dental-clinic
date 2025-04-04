@@ -29,7 +29,7 @@ const HomeDoctor = () => {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="w-full relative md:h-[40vh] bg-[#E3EBFE] flex flex-col md:flex-row items-start justify-between rounded-lg shadow-lg"
+        className="w-full relative md:h-[45vh] bg-[#E3EBFE] flex flex-col md:flex-row items-start justify-between rounded-lg shadow-lg"
       >
         {/* Text Section */}
         <motion.div 
@@ -59,7 +59,7 @@ const HomeDoctor = () => {
           and full-mouth rehabilitation. Dr. Mundra is committed to delivering <br/> exceptional patient outcomes 
           through a unique combination of restorative and <br /> cosmetic dentistry.
           With a deep understanding of dental aesthetics and functionality, <br /> he takes a personalized approach  
-          to every case, ensuring that each patient receives top-quality, tailored care. 
+          to every case so each patient receives top-quality, tailored care. 
           </p>
         </motion.div>
 
