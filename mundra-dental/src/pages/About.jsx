@@ -14,7 +14,6 @@ const About = () => {
 
   const navItems = [
     { label: "Home", href: "/#homehero" },
-    { label: "About", href: "/#homeabout" },
     {
       label: "Services",
       href: "/#homeservices",
@@ -29,8 +28,8 @@ const About = () => {
         { label: "Smile Designing", href: "/services/smile-designing" },
       ],
     },
-    { label: "Team", href: "/#hometeam" },
-    { label: "Reviews",href: "/#reviews", },
+    { label: "Team", href: "/team" },
+    { label: "Reviews",href: "/reviews", },
     { label: "Contact Us", href: "/#homecontact" },
   ];
   const socialLinks = [

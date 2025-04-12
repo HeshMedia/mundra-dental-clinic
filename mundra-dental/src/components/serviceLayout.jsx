@@ -57,7 +57,7 @@ const ServiceLayout = ({
       ],
     },
     { label: "Team", href: "/#hometeam" },
-    { label: "Reviews",href: "/#reviews", },
+    { label: "Reviews",href: "/reviews", },
     { label: "Contact Us", href: "/#homecontact" },
   ];
 

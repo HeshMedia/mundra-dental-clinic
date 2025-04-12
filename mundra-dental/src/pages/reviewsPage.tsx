@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import { motion } from "framer-motion";
 import { FaStar } from "react-icons/fa";
+import { FaGoogle } from "react-icons/fa";
+import Navbar from "../components/navbar";
+import Footer from "../components/ui/footer";
 
+// Using the same reviews data from homeReviews
 const reviews = [
   {
     client: "Gurnoor Kaur",
@@ -116,127 +120,163 @@ const reviews = [
   }
 ];
 
-const optionsRow1 = {
-  type: "loop",
-  perPage: 20,
-  pagination: false,
-  arrows: false,
-  drag: "free",
-  autoScroll: {
-    speed: 1.1,
-    pauseOnHover: true,
+// Sample testimonials data with video URLs
+const testimonials = [
+  {
+    name: "Gurnoor Kaur",
+    videoUrl: "https://example.com/video1.mp4",
+    thumbnail: "https://example.com/thumbnail1.jpg",
+    description: "Patient testimonial about dental treatment"
   },
-  breakpoints: {
-    640: {
-      perPage: 40,
-      speed: 4,
-    },
-    1024: {
-      perPage: 40,
-      speed: 4,
-    },
+  {
+    name: "Sonali Sharma",
+    videoUrl: "https://example.com/video2.mp4",
+    thumbnail: "https://example.com/thumbnail2.jpg",
+    description: "Patient testimonial about dental treatment"
   },
-};
+  {
+    name: "Sarabjeet Kaur Virk",
+    videoUrl: "https://example.com/video3.mp4",
+    thumbnail: "https://example.com/thumbnail3.jpg",
+    description: "Patient testimonial about dental treatment"
+  }
+];
 
-const optionsRow2 = {
-  ...optionsRow1,
-  autoScroll: {
-    speed: -1.2,
-    pauseOnHover: true,
-  },
-};
+const navItems = [
+    { label: "Home", href: "/#homehero" },
+    { label: "About", href: "/about" },
+    {
+      label: "Services",
+      href: "/#homeservices",
+      subItems: [
+        { label: "Orthodontics", href: "/services/orthodontics" },
+        { label: "Root Canal Treatment", href: "/services/root-canal-treatment" },
+        { label: "Dental Implants", href: "/services/dental-implants" },
+        { label: "Teeth Whitening", href: "/services/teeth-whitening" },
+        { label: "Extractions", href: "/services/tooth-extractions" },
+        { label: "Crowns & Bridges", href: "/services/crowns-and-bridges" },
+        { label: "Full and Partial Dentures", href: "/services/full-and-partial-dentures" },
+        { label: "Smile Designing", href: "/services/smile-designing" },
+      ],
+    },
+    { label: "Team", href: "/team" },
+    { label: "Contact Us", href: "/#homecontact" },
+  ];
+
+  const socialLinks = [
+    { label: "Instagram", href: "https://instagram.com", icon: "/path-to-instagram-icon.png" },
+    { label: "Google", href: "https://google.com", icon: "/path-to-google-icon.png" },
+  ];
 
 const StarRating = ({ rating }) => {
   return (
-    <div className="flex justify-center mb-1">
+    <div className="flex justify-center mb-4">
       {[...Array(5)].map((_, i) => (
         <FaStar 
           key={i} 
           className={i < rating ? "text-yellow-400" : "text-gray-300"} 
-          size={16}
+          size={24}
         />
       ))}
     </div>
   );
 };
 
-const HomeReviews = () => {
+const ReviewsPage = () => {
+  // Add scroll to top effect on page load
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "instant"
+    });
+  }, []);
+
   return (
-    <section id="reviews" className="py-12 bg-white overflow-hidden">
-      <div className="flex flex-col items-center justify-center max-w-[98vw] px-4 text-center">
-        <motion.h2
+    <div className="py-12 bg-white">
+      <Navbar navItems={navItems} socialLinks={socialLinks} />
+      <div className="container mx-auto px-4 mt-24">
+        {/* Page Title */}
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-4xl font-semibold text-[#213f8e] pb-5"
+          className="text-center mb-12"
         >
-          Client Reviews
-        </motion.h2>
-        <motion.div
+          <h1 className="text-4xl font-bold text-[#213f8e] mb-4">
+            Reviews and Testimonials
+          </h1>
+          <div className="h-[2px] w-[300px] bg-gray-800 mx-auto mb-8"></div>
+        </motion.div>
+
+        {/* Google Reviews Section */}
+        <motion.section
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="h-[2px] w-[300px] bg-gray-800 mb-8"
-        />
-        {/* Row 1 */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
+          className="mb-16"
         >
-          <Splide options={optionsRow1} extensions={{ AutoScroll }}>
+          <div className="flex items-center justify-center mb-8">
+            <FaGoogle className="text-[#4285F4] text-4xl mr-2" />
+            <h2 className="text-3xl font-semibold text-gray-800">Reviews</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {reviews.map((review, index) => (
-              <SplideSlide key={`row1-${index}`}>
-                <div className="flex-none w-full md:max-w-[510px] max-w-[90vw] bg-[#E3EBFE] md:p-3 p-2 rounded-lg shadow-md text-center md:h-[20vh] h-[18vh] flex flex-col hover:border-2 hover:border-blue-500 mx-0.5">
-                  <div className="flex flex-col items-center mb-2">
-                    <p className="font-bold text-lg pt-1 text-[#3975FA]">
-                      {review.client}
-                    </p>
-                    <StarRating rating={review.stars} />
-                    <p className="text-xs text-gray-500 mb-1">{review.date}</p>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+                className=" bg-[#E3EBFE] rounded-lg shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow hover:border-2 hover:border-blue-500"
+              >
+                <div className="flex items-center mb-4 ml-2">
+                  <div>
+                    <h3 className="font-semibold text-lg text-gray-800">{review.client}</h3>
+                    <p className="text-xs text-gray-500">{review.date}</p>
                   </div>
-                  <p className="italic text-sm text-gray-600 overflow-hidden line-clamp-4">
-                    "{review.review}"
-                  </p>
                 </div>
-              </SplideSlide>
+                <StarRating rating={review.stars} />
+                <p className="text-gray-600 mt-3 italic">"{review.review}"</p>
+              </motion.div>
             ))}
-          </Splide>
-        </motion.div>
-        {/* Row 2 */}
-        <motion.div
+          </div>
+        </motion.section>
+
+        {/* Testimonials Section */}
+        <motion.section
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="mt-6"
-          id="homecontact"
         >
-          <Splide options={optionsRow2} extensions={{ AutoScroll }}>
-            {reviews.map((review, index) => (
-              <SplideSlide key={`row2-${index}`}>
-                <div className="flex-none w-full md:max-w-[510px] max-w-[90vw] bg-[#E3EBFE] md:p-3 p-2 rounded-lg shadow-md text-center md:h-[20vh] h-[18vh] flex flex-col hover:border-2 hover:border-blue-500 mx-0.5">
-                  <div className="flex flex-col items-center mb-2">
-                    <p className="font-bold pt-1 text-lg text-[#3975FA]">
-                      {review.client}
-                    </p>
-                    <StarRating rating={review.stars} />
-                    <p className="text-xs text-gray-500 mb-1">{review.date}</p>
+          <h2 className="text-3xl font-semibold text-center text-gray-800 mb-8">
+            Testimonials
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+                className="bg-white rounded-lg shadow-md overflow-hidden"
+              >
+                <div className="aspect-w-9 aspect-h-16 bg-gray-200">
+                  {/* Replace with actual video component when ready */}
+                  <div className="w-full h-full flex items-center justify-center bg-gray-100">
+                    <p className="text-gray-500">Video Placeholder</p>
                   </div>
-                  <p className="italic text-sm text-gray-600 overflow-hidden line-clamp-4">
-                    "{review.review}"
-                  </p>
                 </div>
-              </SplideSlide>
+              </motion.div>
             ))}
-          </Splide>
-        </motion.div>
+          </div>
+        </motion.section>
       </div>
-    </section>
+      <div className="mt-12">
+        <Footer />
+      </div>
+    </div>
   );
 };
 
-export default HomeReviews;
+export default ReviewsPage;

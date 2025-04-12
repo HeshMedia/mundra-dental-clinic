@@ -43,7 +43,7 @@ const HomeDoctor = () => {
             Dr. Keshav Mundra
           </h3>
           <p className="text-lg font-semibold text-black mb-4">
-            MDS – PROSTHODONTIST
+            MDS – PROSTHODONTIST & ORTHODONTIST
           </p>
           <p className="text-gray-700 md:hidden">
           Dr. Keshav Mundra, is a highly experienced dental specialist with over 15 years of clinical expertise. 

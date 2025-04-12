@@ -10,6 +10,8 @@ import FullAndPartialDentures from '../pages/fullAndPartialDentures';
 import SmileDesigning from '../pages/smileDesigning';
 import Team from '../pages/team';
 import About from '../pages/About';
+import ReviewsPage from '../pages/reviewsPage';
+
 
 const router = createBrowserRouter([
   {
@@ -55,6 +57,10 @@ const router = createBrowserRouter([
   {
     path: '/about',
     element: <About />,
+  },
+  {
+    path: '/reviews',
+    element: <ReviewsPage />,
   }
 
 ]);

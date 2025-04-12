@@ -17,7 +17,7 @@ import toothImage from "/teeth.webp";
 const HomePage = () => {
   const navItems = [
     { label: "Home", href: "#homehero" },
-    { label: "About", href: "#homeabout" },
+    { label: "About", href: "/about" },
     {
       label: "Services",
       href: "#homeservices",
@@ -32,8 +32,8 @@ const HomePage = () => {
         { label: "Smile Designing", href: "/services/smile-designing" },
       ],
     },
-    { label: "Team", href: "#hometeam" },
-    { label: "Reviews",href: "#reviews", },
+    { label: "Team", href: "/team" },
+    { label: "Reviews",href: "/reviews", },
     { label: "Contact Us", href: "#homecontact" },
   ];
 

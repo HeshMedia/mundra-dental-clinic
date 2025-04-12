@@ -1,83 +1,133 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { motion } from 'framer-motion';
+import Navbar from "../components/navbar";
+import Footer from "../components/ui/footer";
+
+// Array of team members data
+const teamMembers = [
+  {
+    id: 1,
+    name: "Dr. Keshav Mundra",
+    title: "MDS - PROSTHODONTIST & ORTHODONTIST",
+    image: "doctor.webp",
+    description: "Dr. Keshav Mundra, a specialist in prosthodontics, excels in dental implants, full-mouth rehabilitation, and smile makeovers. With expertise in restorative and cosmetic dentistry, he provides personalised care focused on aesthetics and functionality. He completed his B.D.S from Genesis Institute of Dental Sciences and Research, Ferozepur under Baba Farid University of Health Sciences, Faridkot (2005-2010) and M.D.S (Dept of Prosthodontics Including Crown and Bridge And Implantology) from College of Dental Sciences, Davangere Under Rajiv Gandhi University of Health Sciences, Bangalore, Karnataka (2011-2014). He has published 'A comparative study to Evaluate the Effect of Polyethylene and Polypropylene Fibers Reinforcement on the Flexural Strength of Dentures Base Resin – An In Vitro Study' in the Global Journal For Research Analysis. His registration number is 7631-A and he has 8 years of professional experience in the field."
+  },
+  {
+    id: 2,
+    name: "Dr. Keshav Mundra",
+    title: "MDS - PROSTHODONTIST & ORTHODONTIST",
+    image: "doctor.webp",
+    description: "Dr. Keshav Mundra, a specialist in prosthodontics, excels in dental implants, full-mouth rehabilitation, and smile makeovers. With expertise in restorative and cosmetic dentistry, he provides personalised care focused on aesthetics and functionality. He completed his B.D.S from Genesis Institute of Dental Sciences and Research, Ferozepur under Baba Farid University of Health Sciences, Faridkot (2005-2010) and M.D.S (Dept of Prosthodontics Including Crown and Bridge And Implantology) from College of Dental Sciences, Davangere Under Rajiv Gandhi University of Health Sciences, Bangalore, Karnataka (2011-2014). He has published 'A comparative study to Evaluate the Effect of Polyethylene and Polypropylene Fibers Reinforcement on the Flexural Strength of Dentures Base Resin – An In Vitro Study' in the Global Journal For Research Analysis. His registration number is 7631-A and he has 8 years of professional experience in the field."
+  },
+  {
+    id: 3,
+    name: "Dr. Keshav Mundra",
+    title: "MDS - PROSTHODONTIST & ORTHODONTIST",
+    image: "doctor.webp",
+    description: "Dr. Keshav Mundra, a specialist in prosthodontics, excels in dental implants, full-mouth rehabilitation, and smile makeovers. With expertise in restorative and cosmetic dentistry, he provides personalised care focused on aesthetics and functionality. He completed his B.D.S from Genesis Institute of Dental Sciences and Research, Ferozepur under Baba Farid University of Health Sciences, Faridkot (2005-2010) and M.D.S (Dept of Prosthodontics Including Crown and Bridge And Implantology) from College of Dental Sciences, Davangere Under Rajiv Gandhi University of Health Sciences, Bangalore, Karnataka (2011-2014). He has published 'A comparative study to Evaluate the Effect of Polyethylene and Polypropylene Fibers Reinforcement on the Flexural Strength of Dentures Base Resin – An In Vitro Study' in the Global Journal For Research Analysis. His registration number is 7631-A and he has 8 years of professional experience in the field."
+  },
+  {
+    id: 4,
+    name: "Dr. Keshav Mundra",
+    title: "MDS - PROSTHODONTIST & ORTHODONTIST",
+    image: "doctor.webp",
+    description: "Dr. Keshav Mundra, a specialist in prosthodontics, excels in dental implants, full-mouth rehabilitation, and smile makeovers. With expertise in restorative and cosmetic dentistry, he provides personalised care focused on aesthetics and functionality. He completed his B.D.S from Genesis Institute of Dental Sciences and Research, Ferozepur under Baba Farid University of Health Sciences, Faridkot (2005-2010) and M.D.S (Dept of Prosthodontics Including Crown and Bridge And Implantology) from College of Dental Sciences, Davangere Under Rajiv Gandhi University of Health Sciences, Bangalore, Karnataka (2011-2014). He has published 'A comparative study to Evaluate the Effect of Polyethylene and Polypropylene Fibers Reinforcement on the Flexural Strength of Dentures Base Resin – An In Vitro Study' in the Global Journal For Research Analysis. His registration number is 7631-A and he has 8 years of professional experience in the field."
+  }
+];
+
+// Navigation items
+const navItems = [
+  { label: "Home", href: "/#homehero" },
+  { label: "About", href: "/about" },
+  {
+    label: "Services",
+    href: "/#homeservices",
+    subItems: [
+      { label: "Orthodontics", href: "/services/orthodontics" },
+      { label: "Root Canal Treatment", href: "/services/root-canal-treatment" },
+      { label: "Dental Implants", href: "/services/dental-implants" },
+      { label: "Teeth Whitening", href: "/services/teeth-whitening" },
+      { label: "Extractions", href: "/services/tooth-extractions" },
+      { label: "Crowns & Bridges", href: "/services/crowns-and-bridges" },
+      { label: "Full and Partial Dentures", href: "/services/full-and-partial-dentures" },
+      { label: "Smile Designing", href: "/services/smile-designing" },
+    ],
+  },
+  { label: "Reviews", href: "/reviews" },
+  { label: "Contact Us", href: "/#homecontact" },
+];
+
+const socialLinks = [
+  { label: "Instagram", href: "https://instagram.com", icon: "/path-to-instagram-icon.png" },
+  { label: "Google", href: "https://google.com", icon: "/path-to-google-icon.png" },
+];
 
 const Team = () => {
+  // Scroll to top on page load
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "instant"
+    });
+  }, []);
+
   return (
-    <div className="bg-white">
+    <div className="bg-white min-h-screen">
+      <Navbar navItems={navItems} socialLinks={socialLinks} />
+      
       {/* Header Section */}
-      <div className="bg-[#E3EBFE] py-6 text-center">
-        <h1 className="text-2xl md:text-3xl font-semibold text-[#213f8e]">
-          Team of Doctors
-        </h1>
-        <hr className="mt-4 w-48 h-1 bg-gray-700 mx-auto" />
+      <div className= "py-12 text-center mt-32">
+        <motion.h1 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl font-bold text-[#213f8e]"
+        >
+          Meet Our Expert Team
+        </motion.h1>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          className="h-[2px] w-[300px] bg-gray-800 mx-auto mt-6"
+        />
       </div>
 
-      {/* Doctor Card */}
-      <div className="max-w-6xl mx-auto px-8 md:px-16 py-8 mt-16 mb-16 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300">
-        {/* Basic Info Section */}
-        <div className="flex flex-col md:flex-row items-center md:items-start md:space-x-6">
-          {/* Text Section */}
-          <div className="md:w-[70vw]">
-            <h2 className="text-4xl font-bold text-[#213f8e]">Dr. Keshav Mundra</h2>
-            <p className="text-gray-600 pt-2">
-              BDS, MDS Consultant Oral and Maxillofacial Prosthodontist and
-              Implantologist.
-            </p>
-            <p className="mt-8 text-gray-700">
-              Dr. Keshav Mundra, a specialist in prosthodontics, excels in dental
-              implants, full-mouth rehabilitation, and smile makeovers. With
-              expertise in restorative and cosmetic dentistry, he provides
-              personalised care focused on aesthetics and functionality.
-            </p>
-          </div>
-
-          {/* Image Section */}
-          <div className="md:w-1/2 mt-6 md:mt-0 flex justify-center md:justify-end">
-            {/* Replace the src with the actual path to your doctor's image */}
-            <img
-              src="team/mundra.JPG"
-              alt="Dr. Keshav Mundra"
-              className="w-48 h-60 object-cover rounded-md"
-            />
-          </div>
+      {/* Team Members Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="space-y-24">
+          {teamMembers.map((member, index) => (
+            <motion.div 
+              key={member.id}
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
+              className="w-full relative bg-[#E3EBFE] flex flex-col md:flex-row items-start justify-between rounded-lg shadow-lg overflow-hidden"
+            >
+              {/* Text Content */}
+              <div className="md:w-[50vw] p-8 md:p-12">
+                <h2 className="text-3xl font-bold text-[#213f8e] mb-2">{member.name}</h2>
+                <p className="text-lg font-semibold text-gray-800 mb-6">{member.title}</p>
+                <p className="text-gray-700">{member.description}</p>
+              </div>
+              
+              {/* Image */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.4 + index * 0.2 }}
+              >
+                <img className="w-full h-full md:w-[21vw] md:h-[28vw] md:absolute bottom-0 md:right-4 px-4"
+                src={member.image}
+                alt={member.name}
+                />
+              </motion.div>
+            </motion.div>
+          ))}
         </div>
-
-        {/* Additional Info Section */}
-        <div className="mt-8 space-y-6">
-          {/* Qualification */}
-          <div>
-            <h3 className="text-xl font-semibold text-[#213f8e]">Qualification</h3>
-            <p className="text-gray-700 mt-2">
-              B.D.S, Genesis Institute of Dental Sciences and Research, Ferozepur under Baba Farid University of Health Sciences, Faridkot (2005-2010)
-            </p>
-            <p className="text-gray-700 mt-2">
-              M.D.S (Dept of Prosthodontics Including Crown and Bridge And Implantology), 
-              College of Dental Sciences, Davangere Under Rajiv Gandhi University of 
-              Health Sciences, Bangalore, Karnataka (2011-2014).
-            </p>
-          </div>
-
-          {/* Publication */}
-          <div>
-            <h3 className="text-xl font-semibold text-[#213f8e]">Publication</h3>
-            <p className="text-gray-700 mt-2">
-              A comparative study to Evaluate the Effect of Polyethylene and 
-              Polypropylene Fibers Reinforcement on the Flexural Strength of 
-              Dentures Base Resin – An In Vitro Study – Global Journal For Research Analysis.
-            </p>
-          </div>
-
-          {/* Regd. No. */}
-          <div>
-            <h3 className="text-xl font-semibold text-[#213f8e]">Regd. No.</h3>
-            <p className="text-gray-700 mt-2">Regd. No. – 7631-A</p>
-          </div>
-
-          {/* Experience */}
-          <div>
-            <h3 className="text-xl font-semibold text-[#213f8e]">Experience</h3>
-            <p className="text-gray-700 mt-2">8 Years of Experience</p>
-          </div>
-        </div>
+      </div>
+      <div className="mt-12">
+        <Footer />
       </div>
     </div>
   );
