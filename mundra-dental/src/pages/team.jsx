@@ -8,28 +8,28 @@ const teamMembers = [
   {
     id: 1,
     name: "Dr. Keshav Mundra",
-    title: "MDS - PROSTHODONTIST & ORTHODONTIST",
+    title: "MDS - PROSTHODONTIST & IMPLANTOLOGIST",
     image: "doctor.webp",
     description: "Dr. Keshav Mundra, a specialist in prosthodontics, excels in dental implants, full-mouth rehabilitation, and smile makeovers. With expertise in restorative and cosmetic dentistry, he provides personalised care focused on aesthetics and functionality. He completed his B.D.S from Genesis Institute of Dental Sciences and Research, Ferozepur under Baba Farid University of Health Sciences, Faridkot (2005-2010) and M.D.S (Dept of Prosthodontics Including Crown and Bridge And Implantology) from College of Dental Sciences, Davangere Under Rajiv Gandhi University of Health Sciences, Bangalore, Karnataka (2011-2014). He has published 'A comparative study to Evaluate the Effect of Polyethylene and Polypropylene Fibers Reinforcement on the Flexural Strength of Dentures Base Resin – An In Vitro Study' in the Global Journal For Research Analysis. His registration number is 7631-A and he has 8 years of professional experience in the field."
   },
   {
     id: 2,
     name: "Dr. Keshav Mundra",
-    title: "MDS - PROSTHODONTIST & ORTHODONTIST",
+    title: "MDS - PROSTHODONTIST & IMPLANTOLOGIST",
     image: "doctor.webp",
     description: "Dr. Keshav Mundra, a specialist in prosthodontics, excels in dental implants, full-mouth rehabilitation, and smile makeovers. With expertise in restorative and cosmetic dentistry, he provides personalised care focused on aesthetics and functionality. He completed his B.D.S from Genesis Institute of Dental Sciences and Research, Ferozepur under Baba Farid University of Health Sciences, Faridkot (2005-2010) and M.D.S (Dept of Prosthodontics Including Crown and Bridge And Implantology) from College of Dental Sciences, Davangere Under Rajiv Gandhi University of Health Sciences, Bangalore, Karnataka (2011-2014). He has published 'A comparative study to Evaluate the Effect of Polyethylene and Polypropylene Fibers Reinforcement on the Flexural Strength of Dentures Base Resin – An In Vitro Study' in the Global Journal For Research Analysis. His registration number is 7631-A and he has 8 years of professional experience in the field."
   },
   {
     id: 3,
     name: "Dr. Keshav Mundra",
-    title: "MDS - PROSTHODONTIST & ORTHODONTIST",
+    title: "MDS - PROSTHODONTIST & IMPLANTOLOGIST",
     image: "doctor.webp",
     description: "Dr. Keshav Mundra, a specialist in prosthodontics, excels in dental implants, full-mouth rehabilitation, and smile makeovers. With expertise in restorative and cosmetic dentistry, he provides personalised care focused on aesthetics and functionality. He completed his B.D.S from Genesis Institute of Dental Sciences and Research, Ferozepur under Baba Farid University of Health Sciences, Faridkot (2005-2010) and M.D.S (Dept of Prosthodontics Including Crown and Bridge And Implantology) from College of Dental Sciences, Davangere Under Rajiv Gandhi University of Health Sciences, Bangalore, Karnataka (2011-2014). He has published 'A comparative study to Evaluate the Effect of Polyethylene and Polypropylene Fibers Reinforcement on the Flexural Strength of Dentures Base Resin – An In Vitro Study' in the Global Journal For Research Analysis. His registration number is 7631-A and he has 8 years of professional experience in the field."
   },
   {
     id: 4,
     name: "Dr. Keshav Mundra",
-    title: "MDS - PROSTHODONTIST & ORTHODONTIST",
+    title: "MDS - PROSTHODONTIST & IMPLANTOLOGIST",
     image: "doctor.webp",
     description: "Dr. Keshav Mundra, a specialist in prosthodontics, excels in dental implants, full-mouth rehabilitation, and smile makeovers. With expertise in restorative and cosmetic dentistry, he provides personalised care focused on aesthetics and functionality. He completed his B.D.S from Genesis Institute of Dental Sciences and Research, Ferozepur under Baba Farid University of Health Sciences, Faridkot (2005-2010) and M.D.S (Dept of Prosthodontics Including Crown and Bridge And Implantology) from College of Dental Sciences, Davangere Under Rajiv Gandhi University of Health Sciences, Bangalore, Karnataka (2011-2014). He has published 'A comparative study to Evaluate the Effect of Polyethylene and Polypropylene Fibers Reinforcement on the Flexural Strength of Dentures Base Resin – An In Vitro Study' in the Global Journal For Research Analysis. His registration number is 7631-A and he has 8 years of professional experience in the field."
   }

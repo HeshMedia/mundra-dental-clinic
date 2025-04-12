@@ -275,10 +275,6 @@ const ReviewsPage = () => {
                     Your browser does not support the video tag.
                   </video>
                 </div>
-                <div className="p-4">
-                  <h3 className="font-semibold text-gray-800">{testimonial.name}</h3>
-                  <p className="text-sm text-gray-600">{testimonial.description}</p>
-                </div>
               </motion.div>
             ))}
           </div>
