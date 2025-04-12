@@ -77,8 +77,8 @@ const About = () => {
               className="relative aspect-[4/5] overflow-hidden rounded-lg shadow-lg hover:scale-105 transition-all duration-300 border-2 border-gray-300"
             >
               <img
-                src={'/about/about1.jpg'}
-                alt="Dental Clinic Interior"
+                src={'/about/about1.webp'}
+                alt="Dr. Mundra's Dental & Implant Clinic on 100 Feet Road, East Mohan Nagar, Amritsar"
                 className="w-full h-full object-cover"
               />
             </motion.div>
@@ -89,8 +89,8 @@ const About = () => {
               className="relative aspect-[4/5] overflow-hidden rounded-lg shadow-lg hover:scale-105 transition-all duration-300 border-2 border-gray-300"
             >
               <img
-                src={'/about/about2.jpg'}
-                alt="Dental Equipment"
+                src={'/about/about2.webp'}
+                alt="Dr Mundra's well equipped clinic with modern facilities"
                 className="w-full h-full object-cover"
               />
             </motion.div>

@@ -124,20 +124,20 @@ const reviews = [
 const testimonials = [
   {
     name: "Gurnoor Kaur",
-    videoUrl: "https://example.com/video1.mp4",
-    thumbnail: "https://example.com/thumbnail1.jpg",
+    videoUrl: "/testimonials/video1.mp4",
+    thumbnail: "/testimonials/1.png",
     description: "Patient testimonial about dental treatment"
   },
   {
     name: "Sonali Sharma",
-    videoUrl: "https://example.com/video2.mp4",
-    thumbnail: "https://example.com/thumbnail2.jpg",
+    videoUrl: "/testimonials/video2.mp4",
+    thumbnail: "/testimonials/2.png",
     description: "Patient testimonial about dental treatment"
   },
   {
     name: "Sarabjeet Kaur Virk",
-    videoUrl: "https://example.com/video3.mp4",
-    thumbnail: "https://example.com/thumbnail3.jpg",
+    videoUrl: "/testimonials/video3.mp4",
+    thumbnail: "/testimonials/3.png",
     description: "Patient testimonial about dental treatment"
   }
 ];
@@ -262,10 +262,22 @@ const ReviewsPage = () => {
                 className="bg-white rounded-lg shadow-md overflow-hidden"
               >
                 <div className="aspect-w-9 aspect-h-16 bg-gray-200">
-                  {/* Replace with actual video component when ready */}
-                  <div className="w-full h-full flex items-center justify-center bg-gray-100">
-                    <p className="text-gray-500">Video Placeholder</p>
-                  </div>
+                  {/* Video player with poster/thumbnail */}
+                  <video 
+                    className="w-full h-full object-cover" 
+                    controls 
+                    autoPlay
+                    muted
+                    loop
+                    poster={testimonial.thumbnail}
+                  >
+                    <source src={testimonial.videoUrl} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <div className="p-4">
+                  <h3 className="font-semibold text-gray-800">{testimonial.name}</h3>
+                  <p className="text-sm text-gray-600">{testimonial.description}</p>
                 </div>
               </motion.div>
             ))}

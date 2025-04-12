@@ -31,7 +31,7 @@ const HomeAbout = () => {
               viewport={{ once: true }}
               className="w-full md:w-[40vw] h-[380px] md:h-screen object-cover rounded-md border-4 hover:border-blue-500 border-gray-500 md:border-0 transition-all"
               src={homeaboutpic}
-              alt="Dr Mundra Clinic, Amritsar"
+              alt="Dr Mundra's Dental & Implant Clinic on 100 Feet Road, East Mohan Nagar, Amritsar"
             />
           </div>
         </motion.div>

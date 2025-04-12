@@ -72,7 +72,7 @@ const HomeChoose = ({ data, image }) => {
               {/* Main Image */}
               <img 
                 src={image} 
-                alt="Tooth Model" 
+                alt="Clean white teeth" 
                 className="w-full h-full object-cover rounded-full" 
               />
             </div>

@@ -77,8 +77,8 @@ const HomeHero = () => {
               transition={isMobile ? {} : { duration: 0.5 }}
               viewport={{ once: true }}
               className="w-full h-[320px] md:h-screen object-cover rounded-md border-4 md:border-none border-gray-500 hover:border-blue-500 transition-all"
-              src="/heropic.jpg"
-              alt="Dentist with patient" 
+              src="/heropic.webp"
+              alt="Dr Keshav Mundra, treating a patient" 
             />
           </div>
         </motion.div>
