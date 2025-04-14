@@ -1,9 +1,18 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaGoogle, FaFacebook, FaInstagram } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const Footer = () => {
+  const location = useLocation();
+
+  const scrollWithOffset = (el) => {
+    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+    const yOffset = -100; // Adjust this value based on your header height
+    window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });
+  };
+
   return (
     <motion.footer
       initial={{ opacity: 0, y: 20 }}
@@ -30,36 +39,44 @@ const Footer = () => {
             <h3 className="font-semibold mb-4 text-foreground">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link
-                  to="#homeabout"
+                <HashLink
+                  smooth
+                  to={location.pathname === "/" ? "#homeabout" : "/#homeabout"}
+                  scroll={scrollWithOffset}
                   className="text-sm text-muted-foreground hover:text-primary"
                 >
                   About
-                </Link>
+                </HashLink>
               </li>
               <li>
-                <Link
-                  to="#homeservices"
+                <HashLink
+                  smooth
+                  to={location.pathname === "/" ? "#homeservices" : "/#homeservices"}
+                  scroll={scrollWithOffset}
                   className="text-sm text-muted-foreground hover:text-primary"
                 >
                   Services
-                </Link>
+                </HashLink>
               </li>
               <li>
-                <Link
-                  to="#homechoose"
+                <HashLink
+                  smooth
+                  to={location.pathname === "/" ? "#homechoose" : "/#homechoose"}
+                  scroll={scrollWithOffset}
                   className="text-sm text-muted-foreground hover:text-primary"
                 >
                   Why Us
-                </Link>
+                </HashLink>
               </li>
               <li>
-                <Link
-                  to="#homecontact"
+                <HashLink
+                  smooth
+                  to={location.pathname === "/" ? "#homecontact" : "/#homecontact"}
+                  scroll={scrollWithOffset}
                   className="text-sm text-muted-foreground hover:text-primary"
                 >
                   Contact
-                </Link>
+                </HashLink>
               </li>
             </ul>
           </div>

@@ -78,7 +78,7 @@ const HomeHero = () => {
               viewport={{ once: true }}
               className="w-full h-[320px] md:h-screen object-cover rounded-md border-4 md:border-none border-gray-500 hover:border-blue-500 transition-all"
               src="/heropic.webp"
-              alt="Dr Keshav Mundra, treating a patient" 
+              alt="Dr Keshav Mundra,the best dentist in Amritsar treating a patient" 
             />
           </div>
         </motion.div>
