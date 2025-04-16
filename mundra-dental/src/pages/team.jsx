@@ -104,7 +104,7 @@ const Team = () => {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.4 + index * 0.2 }}
-                className="md:w-2/5 flex items-end justify-center p-0 md:pb-0"
+                className="w-full md:w-2/5 flex items-end justify-center p-0 md:pb-0"
               >
                 <img 
                   src={member.image}
