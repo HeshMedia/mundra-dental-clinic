@@ -124,6 +124,7 @@ const ReviewsPage = () => {
   const [reviews, setReviews] = useState<Review[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [visibleReviews, setVisibleReviews] = useState(9);
 
   // Fetch reviews from API
   useEffect(() => {
@@ -149,6 +150,11 @@ const ReviewsPage = () => {
 
     fetchReviews();
   }, []);
+
+  // Load more reviews
+  const handleSeeMore = () => {
+    setVisibleReviews(reviews.length);
+  };
 
   // Add scroll to top effect on page load
   useEffect(() => {
@@ -197,26 +203,39 @@ const ReviewsPage = () => {
               <p className="text-red-500">{error}</p>
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {reviews.map((review, index) => (
-                <motion.div
-                  key={review.reviewId}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: index * 0.05 }}
-                  className="bg-[#E3EBFE] rounded-lg shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow hover:border-2 hover:border-blue-500 flex flex-col h-[280px]"
-                >
-                  <div className="mb-2">
-                    <h3 className="font-semibold text-lg text-gray-800">{review.reviewer.displayName}</h3>
-                    <p className="text-xs text-gray-500">{formatDate(review.createTime)}</p>
-                  </div>
-                  <StarRating rating={review.starRating} />
-                  <div className="mt-3 overflow-y-auto flex-grow">
-                    <p className="text-gray-600 italic">{review.comment}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+            <>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {reviews.slice(0, visibleReviews).map((review, index) => (
+                  <motion.div
+                    key={review.reviewId}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: index * 0.05 }}
+                    className="bg-[#E3EBFE] rounded-lg shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow hover:border-2 hover:border-blue-500 flex flex-col h-[280px]"
+                  >
+                    <div className="mb-2">
+                      <h3 className="font-semibold text-lg text-gray-800">{review.reviewer.displayName}</h3>
+                      <p className="text-xs text-gray-500">{formatDate(review.createTime)}</p>
+                    </div>
+                    <StarRating rating={review.starRating} />
+                    <div className="mt-3 overflow-y-auto flex-grow">
+                      <p className="text-gray-600 italic">{review.comment}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+              
+              {visibleReviews < reviews.length && (
+                <div className="text-center mt-8">
+                  <button 
+                    onClick={handleSeeMore}
+                    className="bg-[#213f8e] text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-colors duration-300"
+                  >
+                    See More
+                  </button>
+                </div>
+              )}
+            </>
           )}
         </motion.section>
 
