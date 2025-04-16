@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
@@ -8,136 +8,52 @@ import { FaGoogle } from "react-icons/fa";
 import Navbar from "../components/navbar";
 import Footer from "../components/ui/footer";
 
-// Using the same reviews data from homeReviews
-const reviews = [
-  {
-    client: "Gurnoor Kaur",
-    review: "I had a wonderful experience at the dental office with Dr. Mundra. From the moment I walked in, the staff was friendly and welcoming, creating a comfortable atmosphere. Dr. Mundra is incredibly skilled and attentive.",
-    stars: 5,
-    date: "a month ago"
-  },
-  {
-    client: "Sonali Sharma",
-    review: "Got my fillings done. The clinic has calm and clean environment. I'm impressed by Dr. Keshav's professionalism and dedication for his patients. He is best at his work. Highly recommended.",
-    stars: 5,
-    date: "2 months ago"
-  },
-  {
-    client: "Sarabjeet Kaur Virk",
-    review: "I highly recommend this dentist! He is incredibly skilled and takes great care to ensure that the experience is pain-free. He is thorough, attentive, and truly makes his patients feel comfortable.",
-    stars: 5,
-    date: "5 months ago"
-  },
-  {
-    client: "Ranjit Kaur Butter",
-    review: "Dr. Keshav Mundra is an exceptional dentist! He is highly skilled, patient, and makes you feel at ease. The clinic is well-equipped,staff is friendly and professional. I'm extremely satisfied with the quality of care.",
-    stars: 5,
-    date: "6 months ago"
-  },
-  {
-    client: "Amandeep Kaur",
-    review: "Excellent experience!!! Dr. Keshav and his team have done a brilliant job with my RCT. I will highly recommend this clinic.",
-    stars: 5,
-    date: "2 weeks ago"
-  },
-  {
-    client: "Rajbir Singh",
-    review: "Had a great experience. Everyone here is very nice and works very professionally specially Keshav sir and Aman mam and Khushi.",
-    stars: 5,
-    date: "2 months ago"
-  },
-  {
-    client: "Sarthak Chawla",
-    review: "Very polite and professional. Dr Keshav is very skilled at hand. I feel he's the best dentist in Amritsar.",
-    stars: 5,
-    date: "3 months ago"
-  },
-  {
-    client: "Gurmukh Singh",
-    review: "I have the best experience with the services and treatment by Dr Keshav Mundra. The staff is very cooperative and humble, hygiene is upto mark. They provide painless treatment. I highly recommend it to all.",
-    stars: 5,
-    date: "4 months ago"
-  },
-  {
-    client: "Sahil Negi",
-    review: "I got my tooth extracted from Dr Keshav Mundra, it was completely painless. If you want best dental treatment I would recommend Mundra dental and implant clinic.",
-    stars: 5,
-    date: "4 months ago"
-  },
-  {
-    client: "Major Singh",
-    review: "Mundra Dental Clinic 100 Feet Road Mohan Nagar Amritsar is hands down the best I've ever been to! I am using their services for the past 5 years during my annual visit from New Zealand.",
-    stars: 5,
-    date: "2 months ago"
-  },
-  {
-    client: "Bairaj Singh",
-    review: "If you're looking for a dentist who combines expertise with genuine compassion for his patients, I highly recommend Dr. Keshav Mundra. You'll be in excellent hands!",
-    stars: 5,
-    date: "6 months ago"
-  },
-  {
-    client: "Chanpreet Kaur Sandhu",
-    review: "After undergoing braces treatment at this dental clinic, I can confidently say it was a truly positive experience. Dr. Mundra explained the treatment plan thoroughly and addressed all my concerns with patience and expertise.",
-    stars: 5,
-    date: "a year ago"
-  },
-  {
-    client: "Shivam Aggarwal",
-    review: "I was having tooth ache they removed my akai daar but I have Very good experience it was highly professional & loving environment.",
-    stars: 5,
-    date: "4 months ago"
-  },
-  {
-    client: "Gaganjot Singh",
-    review: "Very experienced & very Knowledgeable Doctor. Very Humble personality. I wish him luck in future.",
-    stars: 5,
-    date: "a month ago"
-  },
-  {
-    client: "Prakriti Khanna",
-    review: "Oh, Dr. Keshav Mundral I recently had an amazing experience with him. He's a fantastic dentist in Amritsar. Dr. Mundra is not only highly skilled but also very friendly and approachable. He made me feel comfortable throughout the entire visit.",
-    stars: 5,
-    date: "a year ago"
-  },
-  {
-    client: "Sukrit Singh",
-    review: "It was wonderful experience with Mundra dental clinic. Dr keshav is very good in his work. Must visit if anyone have dental concern.",
-    stars: 5,
-    date: "4 months ago"
-  },
-  {
-    client: "Gurmit Singh Sandhu",
-    review: "I was travelling from Canada and had to get teeth checked. What I liked about Dr Keshav is that he listens to you patiently and provides vest possible solution and explains the procedure very well.",
-    stars: 5,
-    date: "7 months ago"
-  },
-  {
-    client: "Jobandeep Singh",
-    review: "Amazing clinic! Reception staff were very welcoming and friendly. Dr. made me feel very relaxed and cared for. He is Very intelligent and experienced doctor .. Best treatment with advance technology... and experienced staff .",
-    stars: 5,
-    date: "a year ago"
-  }
-];
+// Interface for API response
+interface ReviewerInfo {
+  profilePhotoUrl: string;
+  displayName: string;
+}
+
+interface ReviewReply {
+  comment: string;
+  updateTime: string;
+}
+
+interface Review {
+  reviewId: string;
+  reviewer: ReviewerInfo;
+  starRating: number;
+  comment: string;
+  createTime: string;
+  updateTime: string;
+  reviewReply?: ReviewReply;
+}
+
+interface ApiResponse {
+  success: boolean;
+  totalReviewCount: number;
+  averageRating: number;
+  reviews: Review[];
+}
 
 // Sample testimonials data with video URLs
 const testimonials = [
   {
     name: "Gurnoor Kaur",
     videoUrl: "/testimonials/video1.mp4",
-    thumbnail: "/testimonials/1.png",
+    thumbnail: "/testimonials/thumbnail.png",
     description: "Patient testimonial about dental treatment"
   },
   {
     name: "Sonali Sharma",
     videoUrl: "/testimonials/video2.mp4",
-    thumbnail: "/testimonials/2.png",
+    thumbnail: "/testimonials/thumbnail.png",
     description: "Patient testimonial about dental treatment"
   },
   {
     name: "Sarabjeet Kaur Virk",
     videoUrl: "/testimonials/video3.mp4",
-    thumbnail: "/testimonials/3.png",
+    thumbnail: "/testimonials/thumbnail.png",
     description: "Patient testimonial about dental treatment"
   }
 ];
@@ -182,7 +98,58 @@ const StarRating = ({ rating }) => {
   );
 };
 
+// Helper function to format date
+const formatDate = (dateString: string) => {
+  const date = new Date(dateString);
+  const now = new Date();
+  const diffTime = Math.abs(now.getTime() - date.getTime());
+  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+  
+  if (diffDays <= 7) {
+    return "a week ago";
+  } else if (diffDays <= 14) {
+    return "2 weeks ago";
+  } else if (diffDays <= 30) {
+    return "a month ago";
+  } else if (diffDays <= 60) {
+    return "2 months ago";
+  } else if (diffDays <= 150) {
+    return Math.floor(diffDays / 30) + " months ago";
+  } else {
+    return "a year ago";
+  }
+};
+
 const ReviewsPage = () => {
+  const [reviews, setReviews] = useState<Review[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  // Fetch reviews from API
+  useEffect(() => {
+    const fetchReviews = async () => {
+      try {
+        const response = await fetch("https://featurable.com/api/v1/widgets/0c362587-5a69-41fd-b697-c2a322abfd6a");
+        
+        if (!response.ok) {
+          throw new Error("Failed to fetch reviews");
+        }
+        
+        const data: ApiResponse = await response.json();
+        // Filter only 5-star reviews
+        const fiveStarReviews = data.reviews.filter(review => review.starRating === 5);
+        setReviews(fiveStarReviews);
+        setLoading(false);
+      } catch (err) {
+        setError("Failed to load reviews. Please try again later.");
+        setLoading(false);
+        console.error("Error fetching reviews:", err);
+      }
+    };
+
+    fetchReviews();
+  }, []);
+
   // Add scroll to top effect on page load
   useEffect(() => {
     window.scrollTo({
@@ -220,26 +187,37 @@ const ReviewsPage = () => {
             <h2 className="text-3xl font-semibold text-gray-800">Reviews</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {reviews.map((review, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                className=" bg-[#E3EBFE] rounded-lg shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow hover:border-2 hover:border-blue-500"
-              >
-                <div className="flex items-center mb-4 ml-2">
-                  <div>
-                    <h3 className="font-semibold text-lg text-gray-800">{review.client}</h3>
-                    <p className="text-xs text-gray-500">{review.date}</p>
+          {loading ? (
+            <div className="text-center py-10">
+              <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-blue-500 border-r-transparent"></div>
+              <p className="mt-4 text-gray-600">Loading reviews...</p>
+            </div>
+          ) : error ? (
+            <div className="text-center py-10">
+              <p className="text-red-500">{error}</p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {reviews.map((review, index) => (
+                <motion.div
+                  key={review.reviewId}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: index * 0.05 }}
+                  className="bg-[#E3EBFE] rounded-lg shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow hover:border-2 hover:border-blue-500 flex flex-col h-[280px]"
+                >
+                  <div className="mb-2">
+                    <h3 className="font-semibold text-lg text-gray-800">{review.reviewer.displayName}</h3>
+                    <p className="text-xs text-gray-500">{formatDate(review.createTime)}</p>
                   </div>
-                </div>
-                <StarRating rating={review.stars} />
-                <p className="text-gray-600 mt-3 italic">"{review.review}"</p>
-              </motion.div>
-            ))}
-          </div>
+                  <StarRating rating={review.starRating} />
+                  <div className="mt-3 overflow-y-auto flex-grow">
+                    <p className="text-gray-600 italic">{review.comment}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          )}
         </motion.section>
 
         {/* Testimonials Section */}

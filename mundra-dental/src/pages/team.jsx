@@ -10,29 +10,17 @@ const teamMembers = [
     name: "Dr. Keshav Mundra",
     title: "MDS - PROSTHODONTIST & IMPLANTOLOGIST",
     image: "doctor.webp",
+    imageStyle: "w-full md:max-w-[350px] h-auto max-h-[500px] object-contain",
     description: "Dr. Keshav Mundra, a specialist in prosthodontics, excels in dental implants, full-mouth rehabilitation, and smile makeovers. With expertise in restorative and cosmetic dentistry, he provides personalised care focused on aesthetics and functionality. He completed his B.D.S from Genesis Institute of Dental Sciences and Research, Ferozepur under Baba Farid University of Health Sciences, Faridkot (2005-2010) and M.D.S (Dept of Prosthodontics Including Crown and Bridge And Implantology) from College of Dental Sciences, Davangere Under Rajiv Gandhi University of Health Sciences, Bangalore, Karnataka (2011-2014). He has published 'A comparative study to Evaluate the Effect of Polyethylene and Polypropylene Fibers Reinforcement on the Flexural Strength of Dentures Base Resin – An In Vitro Study' in the Global Journal For Research Analysis. His registration number is 7631-A and he has 8 years of professional experience in the field."
   },
   {
     id: 2,
-    name: "Dr. Keshav Mundra",
-    title: "MDS - PROSTHODONTIST & IMPLANTOLOGIST",
-    image: "doctor.webp",
-    description: "Dr. Keshav Mundra, a specialist in prosthodontics, excels in dental implants, full-mouth rehabilitation, and smile makeovers. With expertise in restorative and cosmetic dentistry, he provides personalised care focused on aesthetics and functionality. He completed his B.D.S from Genesis Institute of Dental Sciences and Research, Ferozepur under Baba Farid University of Health Sciences, Faridkot (2005-2010) and M.D.S (Dept of Prosthodontics Including Crown and Bridge And Implantology) from College of Dental Sciences, Davangere Under Rajiv Gandhi University of Health Sciences, Bangalore, Karnataka (2011-2014). He has published 'A comparative study to Evaluate the Effect of Polyethylene and Polypropylene Fibers Reinforcement on the Flexural Strength of Dentures Base Resin – An In Vitro Study' in the Global Journal For Research Analysis. His registration number is 7631-A and he has 8 years of professional experience in the field."
+    name: "Dr. Chetan Dev Singh Boparai",
+    title: "MDS - ORTHODONTICS AND DENTOFACIAL ORTHOPAEDICS",
+    image: "team/chetan.webp",
+    imageStyle: "w-full md:max-w-[300px] h-auto max-h-[500px] object-contain",
+    description: "Dr. Chetan Dev Singh Boparai is a distinguished orthodontist with an MDS in Orthodontics and Dentofacial Orthopaedics. He is a Certified Gold II Invisalign Provider and serves as the Director the Dental & Facial Aesthetics Clinic in Amritsar. In addition, he is an Associate Professor at SGRD, Amritsar, and a Consultant Orthodontist at several clinics and hospitals."
   },
-  {
-    id: 3,
-    name: "Dr. Keshav Mundra",
-    title: "MDS - PROSTHODONTIST & IMPLANTOLOGIST",
-    image: "doctor.webp",
-    description: "Dr. Keshav Mundra, a specialist in prosthodontics, excels in dental implants, full-mouth rehabilitation, and smile makeovers. With expertise in restorative and cosmetic dentistry, he provides personalised care focused on aesthetics and functionality. He completed his B.D.S from Genesis Institute of Dental Sciences and Research, Ferozepur under Baba Farid University of Health Sciences, Faridkot (2005-2010) and M.D.S (Dept of Prosthodontics Including Crown and Bridge And Implantology) from College of Dental Sciences, Davangere Under Rajiv Gandhi University of Health Sciences, Bangalore, Karnataka (2011-2014). He has published 'A comparative study to Evaluate the Effect of Polyethylene and Polypropylene Fibers Reinforcement on the Flexural Strength of Dentures Base Resin – An In Vitro Study' in the Global Journal For Research Analysis. His registration number is 7631-A and he has 8 years of professional experience in the field."
-  },
-  {
-    id: 4,
-    name: "Dr. Keshav Mundra",
-    title: "MDS - PROSTHODONTIST & IMPLANTOLOGIST",
-    image: "doctor.webp",
-    description: "Dr. Keshav Mundra, a specialist in prosthodontics, excels in dental implants, full-mouth rehabilitation, and smile makeovers. With expertise in restorative and cosmetic dentistry, he provides personalised care focused on aesthetics and functionality. He completed his B.D.S from Genesis Institute of Dental Sciences and Research, Ferozepur under Baba Farid University of Health Sciences, Faridkot (2005-2010) and M.D.S (Dept of Prosthodontics Including Crown and Bridge And Implantology) from College of Dental Sciences, Davangere Under Rajiv Gandhi University of Health Sciences, Bangalore, Karnataka (2011-2014). He has published 'A comparative study to Evaluate the Effect of Polyethylene and Polypropylene Fibers Reinforcement on the Flexural Strength of Dentures Base Resin – An In Vitro Study' in the Global Journal For Research Analysis. His registration number is 7631-A and he has 8 years of professional experience in the field."
-  }
 ];
 
 // Navigation items
@@ -105,7 +93,7 @@ const Team = () => {
               className="w-full relative bg-[#E3EBFE] flex flex-col md:flex-row items-start justify-between rounded-lg shadow-lg overflow-hidden"
             >
               {/* Text Content */}
-              <div className="md:w-[50vw] p-8 md:p-12">
+              <div className="md:w-3/5 p-8 md:p-12">
                 <h2 className="text-3xl font-bold text-[#213f8e] mb-2">{member.name}</h2>
                 <p className="text-lg font-semibold text-gray-800 mb-6">{member.title}</p>
                 <p className="text-gray-700">{member.description}</p>
@@ -116,10 +104,12 @@ const Team = () => {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.4 + index * 0.2 }}
+                className="md:w-2/5 flex items-end justify-center p-0 md:pb-0"
               >
-                <img className="w-full h-full md:w-[21vw] md:h-[28vw] md:absolute bottom-0 md:right-4 px-4"
-                src={member.image}
-                alt={member.name}
+                <img 
+                  src={member.image}
+                  alt={member.name}
+                  className={member.imageStyle}
                 />
               </motion.div>
             </motion.div>

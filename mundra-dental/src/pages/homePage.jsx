@@ -38,8 +38,8 @@ const HomePage = () => {
   ];
 
   const socialLinks = [
-    { label: "Instagram", href: "https://instagram.com", icon: "/path-to-instagram-icon.png" },
-    { label: "Google", href: "https://google.com", icon: "/path-to-google-icon.png" },
+    { label: "Instagram", href: "https://www.instagram.com/mundradental/", icon: "/path-to-instagram-icon.png" },
+    { label: "Google", href: "https://g.co/kgs/PvWbPmb", icon: "/path-to-google-icon.png" },
   ];
 
   const servicesData = [
