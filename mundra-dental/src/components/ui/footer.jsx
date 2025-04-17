@@ -148,7 +148,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-6 pt-4 border-t border-border text-center text-sm text-muted-foreground">
-          <p className="font-semibold pb-2">&copy; {new Date().getFullYear()} Dr. Mundra's Dental Clinic. All rights reserved.</p>
+          <p className="font-semibold pb-2">&copy; {new Date().getFullYear()} Dr. Mundra's Dental & Implant Clinic. All rights reserved.</p>
           <p>
             Website made and maintained by{" "}
             <a

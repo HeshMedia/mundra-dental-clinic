@@ -120,7 +120,7 @@ const HomeContact = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="max-w-3xl mx-auto px-4 py-8 order-1 md:order-2"
+          className="max-w-3xl mx-auto px-4 py-12 mb-4 order-1 md:order-2"
         >
           <motion.h2
             initial={{ opacity: 0, y: -10 }}

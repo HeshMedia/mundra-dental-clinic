@@ -7,6 +7,7 @@ import { FaStar } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
 import Navbar from "../components/navbar";
 import Footer from "../components/ui/footer";
+import WhatsApp from "../components/ui/whatsapp";
 
 // Interface for API response
 interface ReviewerInfo {
@@ -279,6 +280,7 @@ const ReviewsPage = () => {
       </div>
       <div className="mt-12">
         <Footer />
+        <WhatsApp />
       </div>
     </div>
   );

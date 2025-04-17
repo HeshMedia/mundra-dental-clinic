@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from "../components/navbar";
 import Footer from "../components/ui/footer";
+import WhatsApp from '../components/ui/whatsapp';
 
 // Array of team members data
 const teamMembers = [
@@ -118,6 +119,7 @@ const Team = () => {
       </div>
       <div className="mt-12">
         <Footer />
+        <WhatsApp />
       </div>
     </div>
   );

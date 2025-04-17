@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import homeaboutpic from "../assets/homeaboutpic.jpg";
 import Navbar from '../components/navbar';
 import Footer from '../components/ui/footer';
+import WhatsApp from '../components/ui/whatsapp';
 
 const About = () => {
   useEffect(() => {
@@ -97,6 +98,7 @@ const About = () => {
           </div>
         </div>
       </section>
+      <WhatsApp />
       <Footer />
     </div>
   );
