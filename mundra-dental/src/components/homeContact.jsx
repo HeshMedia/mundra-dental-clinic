@@ -191,15 +191,15 @@ const HomeContact = () => {
             <motion.div
               whileHover={{ scale: 1.1 }}
               transition={{ duration: 0.3 }}
-              className="flex items-center space-x-4"
+              className="flex items-start space-x-4"
             >
               <motion.div 
                 whileHover={{ scale: 1.1 }}
-                className="flex items-center justify-center w-12 h-12 rounded-full bg-[#E3EBFE]"
+                className="flex items-center justify-center w-12 h-12 rounded-full bg-[#E3EBFE] p-2 flex-shrink-0 mt-1"
               >
-                <MapPin className="w-6 h-6 text-[#213f8e]" />
+                <MapPin className="w-5 h-5 text-[#213f8e]" />
               </motion.div>
-              <p className="text-lg text-gray-700 hover:text-blue-700 hover:underline">
+              <p className="text-lg text-gray-700 hover:text-blue-700 hover:underline pt-1">
                 <a href="https://maps.app.goo.gl/458vMNuQi8Y2wzhj9" target="_blank" rel="noopener noreferrer"> 
                   24-A, 100 Feet Rd, East Mohan Nagar, <br />Amritsar, Amritsar Cantt., Punjab 143001
                 </a>
