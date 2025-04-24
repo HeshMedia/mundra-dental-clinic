@@ -66,7 +66,7 @@ const HomeAbout = () => {
             viewport={{ once: true }}
             className="pt-4 text-2xl text-gray-700 md:pr-8 md:mt-5"
           >
-            At Mundra Dental Clinic in Amritsar, we are dedicated to providing exceptional dental care with precision and compassion. Leveraging years of expertise and advanced technology, our skilled team offers a comprehensive suite of dental treatments.
+            At Mundra Dental & Implant Clinic in Amritsar, we are dedicated to providing exceptional dental care with precision and compassion. Leveraging years of expertise and advanced technology, our skilled team offers a comprehensive suite of dental treatments.
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

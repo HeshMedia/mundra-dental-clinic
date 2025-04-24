@@ -46,7 +46,7 @@ const HomeHero = () => {
             viewport={{ once: true }}
             className="pt-4 text-2xl text-gray-700 md:pr-8 md:ml-16 transition-all"
           >
-            Experience advanced dental solutions with a gentle touch at Mundra Dental Clinic, Amritsar. From preventive care to dental implants, we ensure your best smile.
+            Experience advanced dental solutions with a gentle touch at Mundra Dental & Implant Clinic, Amritsar. From preventive care to dental implants, we ensure your best smile.
           </motion.p>
           <a href="#homecontact">
           <motion.button
