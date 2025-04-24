@@ -30,7 +30,7 @@ const HomeHero = () => {
             viewport={{ once: true }}
             className="text-[#213f8e] font-semibold text-4xl pb-5 md:text-5xl md:leading-tight md:ml-16 md:mt-12 transition-all"
           >
-            Your smile, our passion – experience dentistry like never before!
+            Expert Dental Care in Amritsar: Your Smile, Our Passion!
           </motion.h1>
           <motion.div
             initial={isMobile ? {} : { opacity: 0 }}
@@ -46,7 +46,7 @@ const HomeHero = () => {
             viewport={{ once: true }}
             className="pt-4 text-2xl text-gray-700 md:pr-8 md:ml-16 transition-all"
           >
-            Providing advanced dental solutions with a gentle touch. From preventive care to implants, we ensure your best smile.
+            Experience advanced dental solutions with a gentle touch at Mundra Dental Clinic, Amritsar. From preventive care to dental implants, we ensure your best smile.
           </motion.p>
           <a href="#homecontact">
           <motion.button
@@ -78,7 +78,7 @@ const HomeHero = () => {
               viewport={{ once: true }}
               className="w-full h-[320px] md:h-screen object-cover rounded-md border-4 md:border-none border-gray-500 hover:border-blue-500 transition-all"
               src="/heropic.webp"
-              alt="Dr Keshav Mundra,the best dentist in Amritsar treating a patient" 
+              alt="Dr Keshav Mundra, expert dentist in Amritsar, treating a patient at Mundra Dental Clinic"
             />
           </div>
         </motion.div>

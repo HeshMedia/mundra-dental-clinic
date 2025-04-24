@@ -45,98 +45,112 @@ const HomePage = () => {
   const servicesData = [
     {
       title: "Orthodontics",
-      description: "We offer a variety of orthodontic treatments to help you achieve a straighter smile.",
+      description: "Achieve a straighter, healthier smile with expert orthodontic treatments in Amritsar.",
       linkUrl: "./services/orthodontics",
       iconType: "image",
       icon: "/services-icons/dental-braces.svg",
+      alt: "Orthodontic Braces Icon - Mundra Dental Clinic Amritsar"
     },
     {
       title: "Root Canal Treatment",
-      description: "We provide root canal treatments to save your natural teeth and prevent extractions.",
+      description: "Painless root canal therapy (RCT) in Amritsar to save natural teeth and relieve pain.",
       linkUrl: "./services/root-canal-treatment",
       iconType: "image",
       icon: "/services-icons/root-canal.png",
+      alt: "Root Canal Treatment Icon - Mundra Dental Clinic Amritsar"
     },
     {
       title: "Dental Implants",
-      description: "We offer dental implants to replace missing teeth and restore your smile.",
+      description: "Restore your smile with durable dental implants, the best tooth replacement solution in Amritsar.",
       linkUrl: "./services/dental-implants",
       iconType: "image",
       icon: "/services-icons/dental-implant.svg",
+      alt: "Dental Implant Icon - Mundra Dental Clinic Amritsar"
     },
     {
       title: "Teeth Whitening",
-      description: "We provide professional teeth whitening treatments to brighten your smile.",
+      description: "Brighten your smile with professional teeth whitening services at our Amritsar clinic.",
       linkUrl: "./services/teeth-whitening",
       iconType: "image",
       icon: "/services-icons/tooth-whitening.png",
+      alt: "Teeth Whitening Icon - Mundra Dental Clinic Amritsar"
     },
     {
-      title: "Extractions",
-      description: "We perform tooth extractions to remove damaged or decayed teeth.",
+      title: "Tooth Extractions",
+      description: "Safe and comfortable tooth extractions, including wisdom teeth, in Amritsar.",
       linkUrl: "./services/tooth-extractions",
       iconType: "image",
       icon: "/services-icons/tooth-extraction.png",
+      alt: "Tooth Extraction Icon - Mundra Dental Clinic Amritsar"
     },
     {
       title: "Crowns & Bridges",
-      description: "We offer ceramic crowns and bridges to restore damaged or missing teeth.",
+      description: "High-quality ceramic crowns and bridges in Amritsar to restore damaged or missing teeth.",
       linkUrl: "./services/crowns-and-bridges",
       iconType: "image",
       icon: "/services-icons/dental-crown.png",
+      alt: "Dental Crown Icon - Mundra Dental Clinic Amritsar"
     },
     {
       title: "Full & Partial Dentures",
-      description: "We provide full and partial dentures to replace missing teeth and restore your smile.",
+      description: "Comfortable and natural-looking full and partial dentures available in Amritsar.",
       linkUrl: "./services/full-and-partial-dentures",
       iconType: "image",
       icon: "/services-icons/dentures.png",
+      alt: "Dentures Icon - Mundra Dental Clinic Amritsar"
     },
     {
       title: "Smile Designing",
-      description: "We offer smile designing treatments to enhance the appearance of your smile.",
+      description: "Achieve your dream smile with personalized smile designing treatments in Amritsar.",
       linkUrl: "./services/smile-designing",
       iconType: "image",
       icon: "/services-icons/smiley.png",
+      alt: "Smile Designing Icon - Mundra Dental Clinic Amritsar"
     },
   ];
 
   const chooseData = [
     {
-      title: "Experienced Doctor",
-      description: "The goal of our clinic is to provide friendly, caring dentistry.",
+      title: "Experienced Dentist",
+      description: "Led by Dr. Keshav Mundra, our Amritsar clinic offers friendly, caring, and expert dentistry.",
       iconType: "svg",
       Icon: FaUserMd,
+      alt: "Experienced Dentist Icon"
     },
     {
-      title: "Personalized Care",
-      description: "We offer personalized dental care with a focus on comfort.",
+      title: "Personalized Dental Care",
+      description: "Receive personalized dental care focused on your comfort and specific needs in Amritsar.",
       iconType: "svg",
       Icon: FaTooth,
+      alt: "Personalized Dental Care Icon"
     },
     {
       title: "Flexible Payment Options",
-      description: "We provide various payment options to suit your needs.",
+      description: "We provide various flexible payment options for affordable dental treatment in Amritsar.",
       iconType: "svg",
       Icon: FaMoneyBillWave,
+      alt: "Flexible Payment Options Icon"
     },
     {
-      title: "Emergency Services",
-      description: "24/7 emergency dental services available for urgent care.",
+      title: "Emergency Dental Services",
+      description: "Access 24/7 emergency dental services in Amritsar for urgent care when you need it most.",
       iconType: "svg",
       Icon: FaPhoneAlt,
+      alt: "Emergency Dental Services Icon"
     },
     {
-      title: "Positive Patient Reviews",
-      description: "Our patients love us! Check out their testimonials.",
+      title: "Top Patient Reviews",
+      description: "Our Amritsar patients consistently rate us highly. Read their testimonials!",
       iconType: "svg",
       Icon: FaStar,
+      alt: "Patient Reviews Star Icon"
     },
     {
-      title: "Latest Technology",
-      description: "We use cutting-edge technology for the best dental care.",
+      title: "Advanced Dental Technology",
+      description: "Utilizing cutting-edge technology for the highest standard of dental care in Amritsar.",
       iconType: "svg",
       Icon: FaCogs,
+      alt: "Advanced Dental Technology Icon"
     },
   ];
 
