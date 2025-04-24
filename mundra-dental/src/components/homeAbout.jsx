@@ -31,7 +31,7 @@ const HomeAbout = () => {
               viewport={{ once: true }}
               className="w-full md:w-[40vw] h-[380px] md:h-screen object-cover rounded-md border-4 hover:border-blue-500 border-gray-500 md:border-0 transition-all"
               src={homeaboutpic}
-              alt="Dr Mundra's Dental & Implant Clinic on 100 Feet Road, East Mohan Nagar, Amritsar"
+              alt="Comfortable patient waiting area at Mundra Dental & Implant Clinic, Amritsar"
             />
           </div>
         </motion.div>
@@ -50,7 +50,7 @@ const HomeAbout = () => {
             viewport={{ once: true }}
             className="text-[#213f8e] font-semibold text-4xl pb-5 md:text-5xl md:leading-tight"
           >
-            Your Trusted Partner<br /> in Oral Health
+            Your Trusted Amritsar Dentist for Complete Oral Health
           </motion.h1>
           <motion.div
             initial={{ opacity: 0 }}
@@ -66,7 +66,7 @@ const HomeAbout = () => {
             viewport={{ once: true }}
             className="pt-4 text-2xl text-gray-700 md:pr-8 md:mt-5"
           >
-            At Mundra Dental Clinic, we believe in delivering exceptional dental care with precision and compassion. With years of experience and the latest technology, our expert team offers a wide range of treatments.
+            At Mundra Dental Clinic in Amritsar, we are dedicated to providing exceptional dental care with precision and compassion. Leveraging years of expertise and advanced technology, our skilled team offers a comprehensive suite of dental treatments.
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -75,7 +75,7 @@ const HomeAbout = () => {
             viewport={{ once: true }}
             className="pt-2 text-2xl text-gray-700 md:pr-8 md:mt-5"
           >
-            Our mission is to provide pain-free, high-quality dental services in a comfortable environment, ensuring every patient leaves with a confident smile.
+            Our mission is delivering high-quality, pain-free dental services in a comfortable setting, ensuring every patient achieves a healthy, confident smile. Choose the trusted dentist in Amritsar for your oral health needs.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}

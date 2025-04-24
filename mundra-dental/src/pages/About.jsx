@@ -49,7 +49,7 @@ const About = () => {
           transition={{ duration: 0.5 }}
           className="text-4xl md:text-5xl font-bold text-[#213f8e] text-center mb-8"
         >
-          About Us
+          About Mundra Dental Clinic - Your Premier Dentist in Amritsar
         </motion.h1>
         
         <motion.div
@@ -59,10 +59,10 @@ const About = () => {
           className="max-w-6xl mx-auto text-center"
         >
           <p className="text-xl text-gray-700 mb-6">
-          ​Mundra Dental & Implant Clinic is dedicated to delivering exceptional dental care in a warm and professional environment. Our team is committed to enhancing patient health, appearance, self-confidence, and overall quality of life. We prioritize patient education, ensuring that all questions are answered and various treatment options are presented to suit individual dental needs at affordable prices. Our clinic maintains the highest standards of hygiene and utilizes the latest dental technologies to provide a comfortable and effective treatment experience.
+          Mundra Dental & Implant Clinic in Amritsar is committed to delivering outstanding dental care within a welcoming and professional atmosphere. Our expert team focuses on improving patient health, aesthetics, self-confidence, and overall quality of life. We emphasize patient education, ensuring all inquiries are addressed and diverse treatment options are discussed to meet individual dental requirements at competitive prices. Our Amritsar dental clinic adheres to the strictest hygiene protocols and employs cutting-edge dental technology for a comfortable and effective treatment journey.
           </p>
           <p className="text-xl text-gray-700">
-          Located at 24-A, 100 Feet Road, East Mohan Nagar, Amritsar, our clinic offers a welcoming atmosphere designed to make every visit a pleasant one. We believe that a beautiful smile is important for overall well-being, and our team is here to help you achieve and maintain optimal oral health.
+          Conveniently situated at 24-A, 100 Feet Road, East Mohan Nagar, Amritsar, our clinic provides a friendly environment designed to make each visit positive. We understand the importance of a beautiful smile for overall well-being, and our dedicated team is here to assist you in achieving and sustaining optimal oral health in Amritsar.
           </p>
         </motion.div>
       </section>
@@ -79,7 +79,7 @@ const About = () => {
             >
               <img
                 src={'/about/about1.webp'}
-                alt="Dr. Mundra's Dental & Implant Clinic on 100 Feet Road, East Mohan Nagar, Amritsar"
+                alt="Modern dental equipment at Mundra Dental Clinic, Amritsar"
                 className="w-full h-full object-cover"
               />
             </motion.div>
@@ -91,7 +91,7 @@ const About = () => {
             >
               <img
                 src={'/about/about2.webp'}
-                alt="Dr Mundra's well equipped clinic with modern facilities"
+                alt="Comfortable and hygienic treatment room at Mundra Dental Clinic, Amritsar"
                 className="w-full h-full object-cover"
               />
             </motion.div>
@@ -104,4 +104,4 @@ const About = () => {
   );
 };
 
-export default About; 
+export default About;

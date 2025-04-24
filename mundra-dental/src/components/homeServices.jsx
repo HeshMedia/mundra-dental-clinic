@@ -21,10 +21,11 @@ const HomeServices = ({ services }) => {
               whileHover={{ scale: 1.02, transition: { duration: 0.5 } }}
               transition={{ duration: 0.5, delay: 0.3, ease: 'easeInOut' }}
               viewport={{ once: true }}
+              className="h-full"
             >
               <Link
               to={service.linkUrl}
-              className="block group relative p-8 rounded-lg shadow-lg hover:shadow-xl bg-white border-2 border-[#E3EBFE] hover:border-blue-500 transform transition-transform duration-300 md:hover:scale-110 hover:scale-105"
+              className="flex flex-col h-full group relative p-8 rounded-lg shadow-lg hover:shadow-xl bg-white border-2 border-[#E3EBFE] hover:border-blue-500 transform transition-transform duration-300 md:hover:scale-110 hover:scale-105"
               >
                 <div className="mb-4 text-blue-600">
                   {service.iconType === "svg" ? (
@@ -42,7 +43,7 @@ const HomeServices = ({ services }) => {
                   {service.title}
                 </h3>
 
-                <p className="text-gray-600 mb-6">
+                <p className="text-gray-600 mb-6 flex-grow">
                   {service.description}
                 </p>
 

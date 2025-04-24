@@ -218,7 +218,7 @@ const HomeReviews = () => {
           <Splide options={optionsRow2} extensions={{ AutoScroll }}>
             {reviews.map((review, index) => (
               <SplideSlide key={`row2-${index}`}>
-                <div className="flex-none w-full md:max-w-[510px] max-w-[90vw] bg-[#E3EBFE] md:p-3 p-2 rounded-lg shadow-md text-center md:h-[21vh] h-[19vh] flex flex-col hover:border-2 hover:border-blue-500 mx-0.5">
+                <div className="flex-none w-full md:max-w-[540px] max-w-[90vw] bg-[#E3EBFE] md:p-3 p-2 rounded-lg shadow-md text-center md:h-[21vh] h-[19vh] flex flex-col hover:border-2 hover:border-blue-500 mx-0.5">
                   <div className="flex flex-col items-center mb-2">
                     <p className="font-bold pt-2 text-lg text-[#3975FA]">
                       {review.client}

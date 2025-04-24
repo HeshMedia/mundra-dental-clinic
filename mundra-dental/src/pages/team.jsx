@@ -12,7 +12,7 @@ const teamMembers = [
     title: "MDS - PROSTHODONTIST & IMPLANTOLOGIST",
     image: "doctor.webp",
     imageStyle: "w-full md:max-w-[350px] h-auto max-h-[500px] object-contain",
-    description: "Dr. Keshav Mundra, a specialist in prosthodontics, excels in dental implants, full-mouth rehabilitation, and smile makeovers. With expertise in restorative and cosmetic dentistry, he provides personalised care focused on aesthetics and functionality. He completed his B.D.S from Genesis Institute of Dental Sciences and Research, Ferozepur under Baba Farid University of Health Sciences, Faridkot (2005-2010) and M.D.S (Dept of Prosthodontics Including Crown and Bridge And Implantology) from College of Dental Sciences, Davangere Under Rajiv Gandhi University of Health Sciences, Bangalore, Karnataka (2011-2014). He has published 'A comparative study to Evaluate the Effect of Polyethylene and Polypropylene Fibers Reinforcement on the Flexural Strength of Dentures Base Resin – An In Vitro Study' in the Global Journal For Research Analysis. His registration number is 7631-A and he has 15 years of professional experience in the field."
+    description: "Dr. Keshav Mundra, a leading Prosthodontist in Amritsar, specializes in advanced dental implants, full-mouth rehabilitation, and aesthetic smile makeovers. With extensive expertise in restorative and cosmetic dentistry, he delivers personalized care focused on optimal aesthetics and function. He earned his B.D.S from Genesis Institute of Dental Sciences and Research, Ferozepur (Baba Farid University of Health Sciences, Faridkot, 2005-2010) and M.D.S (Prosthodontics, Crown & Bridge, Implantology) from College of Dental Sciences, Davangere (Rajiv Gandhi University of Health Sciences, Bangalore, 2011-2014). His research, 'A comparative study to Evaluate the Effect of Polyethylene and Polypropylene Fibers Reinforcement on the Flexural Strength of Dentures Base Resin – An In Vitro Study', was published in the Global Journal For Research Analysis. Registered under 7631-A, Dr. Mundra brings 15 years of professional experience to his Amritsar dental practice."
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const teamMembers = [
     title: "MDS - ORTHODONTICS AND DENTOFACIAL ORTHOPAEDICS",
     image: "team/chetan.webp",
     imageStyle: "w-full md:max-w-[300px] h-auto max-h-[500px] object-contain",
-    description: "Dr. Chetan Dev Singh Boparai is a distinguished orthodontist with an MDS in Orthodontics and Dentofacial Orthopaedics. He is a Certified Gold II Invisalign Provider and serves as the Director the Dental & Facial Aesthetics Clinic in Amritsar. In addition, he is an Associate Professor at SGRD, Amritsar, and a Consultant Orthodontist at several clinics and hospitals."
+    description: "Dr. Chetan Dev Singh Boparai is an esteemed Orthodontist in Amritsar, holding an MDS in Orthodontics and Dentofacial Orthopaedics. As a Certified Gold II Invisalign Provider, he leads the Dental & Facial Aesthetics Clinic in Amritsar. Dr. Boparai also serves as an Associate Professor at SGRD, Amritsar, and provides expert orthodontic consultation at various clinics and hospitals in the region."
   },
 ];
 
@@ -109,7 +109,7 @@ const Team = () => {
               >
                 <img 
                   src={member.image}
-                  alt={member.name}
+                  alt={`${member.name} - ${member.title} at Mundra Dental Clinic, Amritsar`}
                   className={member.imageStyle}
                 />
               </motion.div>
