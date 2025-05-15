@@ -22,6 +22,14 @@ const teamMembers = [
     imageStyle: "w-full md:max-w-[300px] h-auto max-h-[500px] object-contain",
     description: "Dr. Chetan Dev Singh Boparai is an esteemed Orthodontist in Amritsar, holding an MDS in Orthodontics and Dentofacial Orthopaedics. As a Certified Gold II Invisalign Provider, he leads the Dental & Facial Aesthetics Clinic in Amritsar. Dr. Boparai also serves as an Associate Professor at SGRD, Amritsar, and provides expert orthodontic consultation at various clinics and hospitals in the region."
   },
+  {
+    id: 3,
+    name: "Dr. Roohan Chhinna",
+    title: "BDS, MDS – PEDIATRIC AND PREVENTIVE DENTISTRY",
+    image: "team/roohan.webp",
+    imageStyle: "w-full md:max-w-[300px] h-auto max-h-[500px] object-contain",
+    description: "Dr. Roohan Chhinna is a distinguished Pediatric and Preventive Dentistry specialist with over 10 years of clinical experience. Certified in Conscious Sedation and Microendodontics, she specializes in Pediatric Dentistry, Preventive Dentistry, and Interceptive Orthodontics. Dr. Chhinna is a proud gold medalist for her research in primary teeth endodontics at SAAPD and maintains active memberships in prestigious organizations including ISPPD, SAAPD, and the Indian Dental Association (IDA). She is deeply committed to providing ethical, evidence-based dental care, ensuring the highest standards of treatment for her young patients."
+  }
 ];
 
 // Navigation items
