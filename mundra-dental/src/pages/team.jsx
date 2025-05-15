@@ -24,11 +24,11 @@ const teamMembers = [
   },
   {
     id: 3,
-    name: "Dr. Roohan Chhinna",
+    name: "Dr. Roohan Chhina",
     title: "BDS, MDS – PEDIATRIC AND PREVENTIVE DENTISTRY",
     image: "team/roohan.webp",
     imageStyle: "w-full md:max-w-[300px] h-auto max-h-[500px] object-contain",
-    description: "Dr. Roohan Chhinna is a distinguished Pediatric and Preventive Dentistry specialist with over 10 years of clinical experience. Certified in Conscious Sedation and Microendodontics, she specializes in Pediatric Dentistry, Preventive Dentistry, and Interceptive Orthodontics. Dr. Chhinna is a proud gold medalist for her research in primary teeth endodontics at SAAPD and maintains active memberships in prestigious organizations including ISPPD, SAAPD, and the Indian Dental Association (IDA). She is deeply committed to providing ethical, evidence-based dental care, ensuring the highest standards of treatment for her young patients."
+    description: "Dr. Roohan Chhina is a distinguished Pediatric and Preventive Dentistry specialist with over 10 years of clinical experience. Certified in Conscious Sedation and Microendodontics, she specializes in Pediatric Dentistry, Preventive Dentistry, and Interceptive Orthodontics. Dr. Chhinna is a proud gold medalist for her research in primary teeth endodontics at SAAPD and maintains active memberships in prestigious organizations including ISPPD, SAAPD, and the Indian Dental Association (IDA). She is deeply committed to providing ethical, evidence-based dental care, ensuring the highest standards of treatment for her young patients."
   }
 ];
 
