@@ -30,6 +30,14 @@ const teamMembers = [
     description: "Dr. Roohan Chhina is a distinguished Pediatric and Preventive Dentistry specialist with over 10 years of clinical experience. Certified in Conscious Sedation and Microendodontics, she specializes in Pediatric Dentistry, Preventive Dentistry, and Interceptive Orthodontics. Dr. Chhinna is a proud gold medalist for her research in primary teeth endodontics at SAAPD and maintains active memberships in prestigious organizations including ISPPD, SAAPD, and the Indian Dental Association (IDA). She is deeply committed to providing ethical, evidence-based dental care, ensuring the highest standards of treatment for her young patients."
   },  {
     id: 4,
+    name: "Dr. Ramandeep Singh Bhullar",
+    title: "MDS, F.I.C.S, F.I.C.D - ORAL & MAXILLOFACIAL SURGEON",
+    image: "team/ramandeep.webp",
+    imageStyle: "w-full h-auto mt-[50px] object-contain",
+    description: "Prof. (Dr) Ramandeep Singh Bhullar is a distinguished Oral and Maxillofacial Surgeon with over two decades of expertise. He holds an MDS from Sri Ramachandra Medical College, Chennai, and is a Fellow of the International College of Surgeons (F.I.C.S) and International College of Dentists (F.I.C.D). Currently serving as Professor & Dean of Academics at Sri Guru Ram Das Institute of Dental Sciences, Amritsar, with 16 years of teaching experience. Dr. Bhullar has served as President of AOMSI Punjab Chapter and past President of the Indian Dental Association (Amritsar Branch). With 3 published books and 41 research articles, he combines clinical excellence with academic leadership to provide exceptional oral and maxillofacial surgical care."
+  },
+  {
+    id: 5,
     name: "Dr. Amandeep Kaur",
     title: "BDS - GENERAL DENTIST",
     image: "team/amandeep.webp", 
